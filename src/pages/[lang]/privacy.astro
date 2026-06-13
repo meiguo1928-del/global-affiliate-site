@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LOCALES, type Locale } from '../../config';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const page = ui[lang].privacy;
+---
+
+<BaseLayout title={page.title} description={page.sections[0].body} lang={lang} subPath="privacy">
+  <h1>{page.title}</h1>
+  {page.sections.map((s) => (
+    <section>
+      <h2>{s.heading}</h2>
+      <p>{s.body}</p>
+    </section>
+  ))}
+</BaseLayout>

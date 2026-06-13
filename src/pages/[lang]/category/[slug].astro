@@ -1,0 +1,104 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { LOCALES, type Locale } from '../../../config';
+import { ui } from '../../../i18n/ui';
+import { localePath } from '../../../utils/locale';
+
+const categoryDefs = {
+  'ai-tools': {
+    title: {
+      en: 'AI Tools Buying Guides',
+      de: 'Kaufberater für KI-Tools',
+      es: 'Guías de compra de herramientas de IA',
+      ja: 'AIツール購入ガイド',
+      th: 'คู่มือซื้อเครื่องมือ AI',
+    },
+    desc: {
+      en: 'Compare pricing, alternatives, and use-cases for AI and automation software.',
+      de: 'Preis, Alternativen und Einsatzfälle von KI- und Automatisierungstools vergleichen.',
+      es: 'Compara precios, alternativas y casos de uso de herramientas de IA y automatización.',
+      ja: 'AI・自動化ツールの価格、代替案、用途を比較します。',
+      th: 'เปรียบเทียบราคา ทางเลือก และการใช้งานของเครื่องมือ AI และระบบอัตโนมัติ',
+    },
+    test: /ai|automation|content|seo|saas/i,
+  },
+  hosting: {
+    title: {
+      en: 'Hosting Buying Guides',
+      de: 'Hosting-Kaufberater',
+      es: 'Guías de compra de hosting',
+      ja: 'ホスティング購入ガイド',
+      th: 'คู่มือซื้อโฮสติ้ง',
+    },
+    desc: {
+      en: 'Find the best-value hosting and website tools for beginners and small businesses.',
+      de: 'Die besten Hosting- und Website-Tools für Einsteiger und kleine Unternehmen finden.',
+      es: 'Encuentra el hosting y herramientas web con mejor relación calidad-precio.',
+      ja: '初心者と小規模事業向けにコスパの良いホスティングを選べます。',
+      th: 'เลือกโฮสติ้งและเครื่องมือเว็บไซต์ที่คุ้มค่าสำหรับผู้เริ่มต้นและธุรกิจเล็ก',
+    },
+    test: /hosting|wordpress|domain|server|website/i,
+  },
+  security: {
+    title: {
+      en: 'Security Buying Guides',
+      de: 'Sicherheits-Kaufberater',
+      es: 'Guías de compra de seguridad',
+      ja: 'セキュリティ購入ガイド',
+      th: 'คู่มือซื้อเครื่องมือความปลอดภัย',
+    },
+    desc: {
+      en: 'Compare VPN and privacy tools before paying for a yearly plan.',
+      de: 'VPN- und Datenschutz-Tools vor dem Kauf eines Jahresplans vergleichen.',
+      es: 'Compara VPN y herramientas de privacidad antes de pagar un plan anual.',
+      ja: '年間プランを契約する前にVPNとプライバシーツールを比較できます。',
+      th: 'เปรียบเทียบ VPN และเครื่องมือความเป็นส่วนตัวก่อนจ่ายรายปี',
+    },
+    test: /vpn|security|privacy|password/i,
+  },
+} as const;
+
+type CategorySlug = keyof typeof categoryDefs;
+
+export async function getStaticPaths() {
+  return LOCALES.flatMap((lang) =>
+    ['ai-tools', 'hosting', 'security'].map((slug) => ({ params: { lang, slug } })),
+  );
+}
+
+const { lang, slug } = Astro.params as { lang: Locale; slug: CategorySlug };
+const category = categoryDefs[slug];
+const t = ui[lang].home;
+
+const allArticles = (await getCollection('articles'))
+  .filter((a) => a.data.lang === lang)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+const articles = allArticles.filter((a) => category.test.test((a.data.keywords ?? []).join(' ')));
+---
+
+<BaseLayout
+  title={category.title[lang]}
+  description={category.desc[lang]}
+  lang={lang}
+  subPath={`category/${slug}`}
+>
+  <h1>{category.title[lang]}</h1>
+  <p class="hero-sub">{category.desc[lang]}</p>
+
+  {
+    articles.length > 0 ? (
+      <div class="card-grid">
+        {articles.map((article) => (
+          <a class="card" href={localePath(lang, article.data.permalink)}>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.description}</p>
+          </a>
+        ))}
+      </div>
+    ) : (
+      <p>{t.emptyTrack}</p>
+    )
+  }
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import { SITE, LOCALES, LOCALE_LABELS, type Locale } from '../config';
+import { ui } from '../i18n/ui';
+import { localePath } from '../utils/locale';
+
+interface Props {
+  lang: Locale;
+  subPath?: string;
+}
+
+const { lang, subPath = '' } = Astro.props;
+const t = ui[lang].nav;
+const homeHref = localePath(lang);
+---
+
+<header class="header">
+  <div class="inner">
+    <a class="brand" href={homeHref}>{SITE.name}</a>
+    <nav class="nav" aria-label="Main">
+      <a href={localePath(lang)}>{t.home}</a>
+      <a href={localePath(lang, 'about')}>{t.about}</a>
+      <a href={localePath(lang, 'contact')}>{t.contact}</a>
+      <a href={localePath(lang, 'privacy')}>{t.privacy}</a>
+    </nav>
+    <div class="lang-switch" aria-label="Language">
+      {LOCALES.map((l) => (
+        <a
+          href={localePath(l, subPath)}
+          class:list={['lang', { active: l === lang }]}
+          hreflang={l}
+        >
+          {LOCALES.indexOf(l) < 3 ? l.toUpperCase() : LOCALE_LABELS[l].slice(0, 2)}
+        </a>
+      ))}
+    </div>
+  </div>
+</header>
+
+<style>
+  .header {
+    background: #0f172a;
+    color: #f8fafc;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+  .inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0.85rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.25rem;
+  }
+  .brand {
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  .nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    flex: 1;
+  }
+  .nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.88rem;
+  }
+  .nav a:hover {
+    color: #fff;
+  }
+  .lang-switch {
+    display: flex;
+    gap: 0.35rem;
+  }
+  .lang {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.45rem;
+    border-radius: 6px;
+    color: #94a3b8;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .lang.active,
+  .lang:hover {
+    color: #fff;
+    border-color: #334155;
+    background: #1e293b;
+  }
+</style>

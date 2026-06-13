@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { SITE, LOCALES, type Locale } from '../../config';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const page = ui[lang].contact;
+---
+
+<BaseLayout title={page.title} description={page.body} lang={lang} subPath="contact">
+  <h1>{page.title}</h1>
+  <p>{page.body}</p>
+  <p>
+    <strong>{page.emailLabel}:</strong>{' '}
+    <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+  </p>
+</BaseLayout>

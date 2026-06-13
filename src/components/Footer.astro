@@ -1,0 +1,48 @@
+---
+import { SITE, type Locale } from '../config';
+import { ui } from '../i18n/ui';
+import { localePath } from '../utils/locale';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang];
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <p class="disclosure">{t.footer.disclosure}</p>
+  <p>© {year} {SITE.name}. {t.footer.rights}</p>
+  <nav>
+    <a href={localePath(lang, 'privacy')}>{t.nav.privacy}</a>
+    <a href={localePath(lang, 'contact')}>{t.nav.contact}</a>
+  </nav>
+</footer>
+
+<style>
+  .footer {
+    max-width: 920px;
+    margin: 3rem auto 2rem;
+    padding: 0 1.25rem;
+    color: #64748b;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+  .disclosure {
+    margin-bottom: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+  }
+  nav {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 1rem;
+  }
+  nav a {
+    color: #475569;
+  }
+</style>

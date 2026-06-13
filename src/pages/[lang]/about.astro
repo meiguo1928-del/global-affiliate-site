@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LOCALES, type Locale } from '../../config';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const page = ui[lang].about;
+---
+
+<BaseLayout title={page.title} description={page.body[0]} lang={lang} subPath="about">
+  <h1>{page.title}</h1>
+  {page.body.map((p) => <p>{p}</p>)}
+</BaseLayout>

@@ -1,0 +1,32 @@
+---
+import { ui } from '../i18n/ui';
+import type { Locale } from '../config';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+const t = ui[lang].disclosure;
+---
+
+<aside class="disclosure" role="note">
+  <strong>{t.title}</strong>
+  <p>{t.text}</p>
+</aside>
+
+<style>
+  .disclosure {
+    background: #fff8e6;
+    border: 1px solid #f0d78c;
+    border-radius: 10px;
+    padding: 1rem 1.15rem;
+    margin-bottom: 1.75rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+    color: #5c4a1a;
+  }
+  .disclosure p {
+    margin: 0.35rem 0 0;
+  }
+</style>

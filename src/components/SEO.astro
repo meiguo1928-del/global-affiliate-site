@@ -1,0 +1,52 @@
+---
+import { SITE, LOCALES, type Locale } from '../config';
+
+interface Props {
+  title: string;
+  description: string;
+  lang: Locale;
+  path?: string;
+  alternates?: Partial<Record<Locale, string>>;
+  keywords?: string[];
+  type?: 'website' | 'article';
+  published?: string;
+}
+
+const {
+  title,
+  description,
+  lang,
+  path = '',
+  alternates = {},
+  keywords = [],
+  type = 'website',
+  published,
+} = Astro.props;
+
+const canonical = new URL(`/${lang}/${path}`.replace(/\/+/g, '/').replace(/\/$/, '') + '/', SITE.url).href;
+const fullTitle = path.includes('index') ? title : `${title} | ${SITE.name}`;
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+{keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content={type} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={canonical} />
+<meta property="og:site_name" content={SITE.name} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+{published && <meta property="article:published_time" content={published} />}
+
+{LOCALES.map((l) => {
+  const altSlug = alternates[l] ?? (l === lang ? path : null);
+  if (!altSlug && l !== lang) return null;
+  const href = new URL(`/${l}/${altSlug ? altSlug + '/' : ''}`, SITE.url).href;
+  return <link rel="alternate" hreflang={l} href={href} />;
+})}
+<link rel="alternate" hreflang="x-default" href={new URL('/en/', SITE.url).href} />
