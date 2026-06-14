@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { LOCALES, type Locale } from '../../config';
+import { ui } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return LOCALES.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+const page = ui[lang].testing;
+---
+
+<BaseLayout title={page.title} description={page.intro} lang={lang} subPath="how-we-test">
+  <h1>{page.title}</h1>
+  <p class="hero-sub">{page.intro}</p>
+  {
+    page.sections.map((section) => (
+      <section>
+        <h2>{section.heading}</h2>
+        {section.body.map((paragraph) => <p>{paragraph}</p>)}
+      </section>
+    ))
+  }
+</BaseLayout>

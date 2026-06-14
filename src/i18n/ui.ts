@@ -1,7 +1,7 @@
 import type { Locale } from '../config';
 
 type UiStrings = {
-  nav: { home: string; about: string; contact: string; privacy: string };
+  nav: { home: string; about: string; testing: string; contact: string; privacy: string };
   disclosure: { title: string; text: string };
   footer: { rights: string; disclosure: string };
   home: {
@@ -20,6 +20,11 @@ type UiStrings = {
     emptyTrack: string;
   };
   about: { title: string; body: string[] };
+  testing: {
+    title: string;
+    intro: string;
+    sections: { heading: string; body: string[] }[];
+  };
   contact: { title: string; body: string; emailLabel: string };
   privacy: { title: string; sections: { heading: string; body: string }[] };
   article: {
@@ -34,7 +39,7 @@ type UiStrings = {
 
 export const ui: Record<Locale, UiStrings> = {
   en: {
-    nav: { home: 'Home', about: 'About', contact: 'Contact', privacy: 'Privacy' },
+    nav: { home: 'Home', about: 'About', testing: 'How We Test', contact: 'Contact', privacy: 'Privacy' },
     disclosure: {
       title: 'Affiliate Disclosure',
       text: 'This article contains affiliate links. We may earn a commission at no extra cost to you when you purchase through our links.',
@@ -83,6 +88,40 @@ export const ui: Record<Locale, UiStrings> = {
         'We serve readers worldwide in multiple languages.',
       ],
     },
+    testing: {
+      title: 'How We Test',
+      intro: 'Our goal is to help readers make safer, clearer buying decisions. We do not publish fake hands-on claims, invented prices, or guaranteed positive coverage.',
+      sections: [
+        {
+          heading: 'What we verify',
+          body: [
+            'We check public pricing pages, plan limits, core features, renewal terms, and commercial-use restrictions when available.',
+            'For tools we have not personally tested, we describe the analysis as research-based and avoid claiming direct usage.',
+          ],
+        },
+        {
+          heading: 'How we compare products',
+          body: [
+            'We focus on practical buying criteria: total cost, ease of setup, use-case fit, support expectations, and upgrade path.',
+            'We prioritize high-intent comparisons such as pricing, alternatives, and tool-vs-tool decisions.',
+          ],
+        },
+        {
+          heading: 'Affiliate disclosure',
+          body: [
+            'Some outbound links may become affiliate links after partner approval. This does not change the price paid by readers.',
+            'Affiliate relationships do not guarantee positive reviews, rankings, or recommendations.',
+          ],
+        },
+        {
+          heading: 'Update policy',
+          body: [
+            'Software pricing and features change frequently. We use article update dates to show when a guide was last reviewed.',
+            'Readers should always confirm final pricing and terms on the official vendor website before purchase.',
+          ],
+        },
+      ],
+    },
     contact: {
       title: 'Contact',
       body: 'Questions, corrections, or partnership inquiries — reach us by email. We publish independent product comparisons and may earn affiliate commissions.',
@@ -119,7 +158,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
   },
   de: {
-    nav: { home: 'Start', about: 'Über uns', contact: 'Kontakt', privacy: 'Datenschutz' },
+    nav: { home: 'Start', about: 'Über uns', testing: 'Testmethode', contact: 'Kontakt', privacy: 'Datenschutz' },
     disclosure: {
       title: 'Affiliate-Hinweis',
       text: 'Dieser Artikel enthält Affiliate-Links. Bei einem Kauf über unsere Links erhalten wir ggf. eine Provision — für Sie ohne Mehrkosten.',
@@ -167,6 +206,40 @@ export const ui: Record<Locale, UiStrings> = {
         'Wir erreichen Leser weltweit in mehreren Sprachen.',
       ],
     },
+    testing: {
+      title: 'Unsere Testmethode',
+      intro: 'Unser Ziel ist eine sachliche Kaufentscheidung ohne erfundene Erfahrungsberichte, falsche Preise oder garantierte positive Bewertungen.',
+      sections: [
+        {
+          heading: 'Was wir prüfen',
+          body: [
+            'Wir prüfen öffentliche Preisseiten, Tarifgrenzen, Kernfunktionen, Verlängerungsbedingungen und kommerzielle Nutzungsrechte, sofern verfügbar.',
+            'Wenn wir ein Produkt nicht selbst getestet haben, kennzeichnen wir die Bewertung als recherchebasiert und behaupten keine direkte Nutzung.',
+          ],
+        },
+        {
+          heading: 'Wie wir vergleichen',
+          body: [
+            'Wir bewerten Gesamtkosten, Einrichtung, Nutzungsszenario, Support-Erwartungen und Upgrade-Pfad.',
+            'Der Fokus liegt auf kaufnahen Vergleichen: Preise, Alternativen und Tool-gegen-Tool-Entscheidungen.',
+          ],
+        },
+        {
+          heading: 'Affiliate-Hinweis',
+          body: [
+            'Einige externe Links können nach Partnerfreigabe Affiliate-Links werden. Der Preis für Leser ändert sich dadurch nicht.',
+            'Affiliate-Beziehungen garantieren keine positiven Bewertungen oder Platzierungen.',
+          ],
+        },
+        {
+          heading: 'Aktualisierung',
+          body: [
+            'Preise und Funktionen ändern sich häufig. Das Aktualisierungsdatum zeigt, wann ein Ratgeber zuletzt geprüft wurde.',
+            'Endpreise und Bedingungen sollten immer auf der offiziellen Anbieterwebsite bestätigt werden.',
+          ],
+        },
+      ],
+    },
     contact: {
       title: 'Kontakt',
       body: 'Fragen, Korrekturen oder Kooperationen — schreiben Sie uns per E-Mail.',
@@ -203,7 +276,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
   },
   es: {
-    nav: { home: 'Inicio', about: 'Nosotros', contact: 'Contacto', privacy: 'Privacidad' },
+    nav: { home: 'Inicio', about: 'Nosotros', testing: 'Cómo probamos', contact: 'Contacto', privacy: 'Privacidad' },
     disclosure: {
       title: 'Divulgación de afiliados',
       text: 'Este artículo contiene enlaces de afiliado. Podemos recibir una comisión sin costo adicional para usted.',
@@ -250,6 +323,40 @@ export const ui: Record<Locale, UiStrings> = {
         'Nuestras reseñas se basan en especificaciones públicas y precios oficiales. Los enlaces de afiliado están claramente indicados.',
       ],
     },
+    testing: {
+      title: 'Cómo probamos',
+      intro: 'Nuestro objetivo es ayudar a comprar con menos riesgo. No publicamos experiencias inventadas, precios falsos ni reseñas positivas garantizadas.',
+      sections: [
+        {
+          heading: 'Qué verificamos',
+          body: [
+            'Revisamos precios públicos, límites de planes, funciones principales, renovaciones y condiciones de uso comercial cuando están disponibles.',
+            'Si no hemos probado una herramienta directamente, evitamos afirmarlo y presentamos el contenido como análisis basado en investigación.',
+          ],
+        },
+        {
+          heading: 'Cómo comparamos',
+          body: [
+            'Evaluamos costo total, facilidad de configuración, ajuste al caso de uso, soporte esperado y camino de actualización.',
+            'Priorizamos búsquedas con intención de compra: precios, alternativas y comparaciones entre herramientas.',
+          ],
+        },
+        {
+          heading: 'Divulgación de afiliados',
+          body: [
+            'Algunos enlaces externos pueden convertirse en enlaces de afiliado tras la aprobación de socios. Esto no cambia el precio para el lector.',
+            'Una relación de afiliado no garantiza reseñas positivas ni posiciones favorables.',
+          ],
+        },
+        {
+          heading: 'Actualizaciones',
+          body: [
+            'Los precios y funciones cambian con frecuencia. La fecha de actualización indica la última revisión del contenido.',
+            'Siempre recomendamos confirmar precio final y términos en la web oficial del proveedor.',
+          ],
+        },
+      ],
+    },
     contact: {
       title: 'Contacto',
       body: 'Preguntas o correcciones — escríbanos por correo.',
@@ -274,7 +381,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
   },
   ja: {
-    nav: { home: 'ホーム', about: '概要', contact: '連絡', privacy: 'プライバシー' },
+    nav: { home: 'ホーム', about: '概要', testing: '評価方法', contact: '連絡', privacy: 'プライバシー' },
     disclosure: {
       title: 'アフィリエイト開示',
       text: '本記事にはアフィリエイトリンクが含まれます。リンク経由の購入で当サイトに報酬が発生する場合があります（お客様の負担は増えません）。',
@@ -315,6 +422,40 @@ export const ui: Record<Locale, UiStrings> = {
       title: 'サイトについて',
       body: ['Global Affiliate HubはAIツール、ホスティング、セキュリティ製品の独立比較記事を公開しています。'],
     },
+    testing: {
+      title: '評価方法',
+      intro: '読者が安心して比較できるよう、架空の使用体験、確認していない価格、肯定的評価の保証は掲載しません。',
+      sections: [
+        {
+          heading: '確認する内容',
+          body: [
+            '公開価格、プラン制限、主要機能、更新料金、商用利用条件などを確認します。',
+            '実際に使用していない製品については、調査に基づく分析として扱い、直接利用したとは記載しません。',
+          ],
+        },
+        {
+          heading: '比較基準',
+          body: [
+            '総コスト、導入のしやすさ、用途への適合性、サポート期待値、アップグレードのしやすさを重視します。',
+            '価格、代替案、製品同士の比較など、購入判断に近いテーマを優先します。',
+          ],
+        },
+        {
+          heading: 'アフィリエイト開示',
+          body: [
+            '外部リンクは提携承認後にアフィリエイトリンクになる場合があります。読者の支払額は変わりません。',
+            '提携関係は、肯定的なレビューや順位を保証するものではありません。',
+          ],
+        },
+        {
+          heading: '更新方針',
+          body: [
+            'ソフトウェアの価格や機能は頻繁に変わります。記事の更新日で最終確認時期を示します。',
+            '購入前には必ず公式サイトで最終価格と条件をご確認ください。',
+          ],
+        },
+      ],
+    },
     contact: { title: 'お問い合わせ', body: 'ご質問はメールでどうぞ。', emailLabel: 'メール' },
     privacy: {
       title: 'プライバシーポリシー',
@@ -335,7 +476,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
   },
   th: {
-    nav: { home: 'หน้าแรก', about: 'เกี่ยวกับ', contact: 'ติดต่อ', privacy: 'ความเป็นส่วนตัว' },
+    nav: { home: 'หน้าแรก', about: 'เกี่ยวกับ', testing: 'วิธีรีวิว', contact: 'ติดต่อ', privacy: 'ความเป็นส่วนตัว' },
     disclosure: {
       title: 'เปิดเผยพันธมิตร',
       text: 'บทความนี้มีลิงก์พันธมิตร เราอาจได้รับค่าคอมมิชชันโดยไม่เพิ่มค่าใช้จ่ายให้คุณ',
@@ -375,6 +516,40 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'เกี่ยวกับเรา',
       body: ['Global Affiliate Hub เผยแพร่คู่มือเปรียบเทียบเครื่องมือ AI โฮสติ้ง และความปลอดภัยแบบอิสระ'],
+    },
+    testing: {
+      title: 'วิธีรีวิวของเรา',
+      intro: 'เราเน้นช่วยให้ผู้อ่านตัดสินใจซื้ออย่างปลอดภัย ไม่สร้างประสบการณ์ปลอม ไม่แต่งราคา และไม่รับประกันรีวิวเชิงบวกเพื่อค่าตอบแทน',
+      sections: [
+        {
+          heading: 'สิ่งที่เราตรวจสอบ',
+          body: [
+            'เราตรวจสอบหน้าราคา ข้อจำกัดของแพ็กเกจ ฟีเจอร์หลัก เงื่อนไขต่ออายุ และสิทธิ์ใช้งานเชิงพาณิชย์เมื่อมีข้อมูล',
+            'ถ้าเครื่องมือใดยังไม่ได้ทดลองใช้โดยตรง เราจะระบุเป็นการวิเคราะห์จากข้อมูลสาธารณะ ไม่กล่าวอ้างว่าได้ทดลองจริง',
+          ],
+        },
+        {
+          heading: 'เกณฑ์เปรียบเทียบ',
+          body: [
+            'เราให้ความสำคัญกับต้นทุนรวม ความง่ายในการเริ่มใช้งาน ความเหมาะสมกับงานจริง การสนับสนุน และเส้นทางอัปเกรด',
+            'เราเน้นหัวข้อที่ใกล้การตัดสินใจซื้อ เช่น ราคา ทางเลือกทดแทน และการเปรียบเทียบเครื่องมือ',
+          ],
+        },
+        {
+          heading: 'การเปิดเผยลิงก์พันธมิตร',
+          body: [
+            'บางลิงก์ภายนอกอาจกลายเป็นลิงก์พันธมิตรหลังจากได้รับอนุมัติ โดยราคาที่ผู้อ่านจ่ายจะไม่เปลี่ยน',
+            'ความสัมพันธ์แบบพันธมิตรไม่รับประกันรีวิวเชิงบวกหรืออันดับที่ดีกว่า',
+          ],
+        },
+        {
+          heading: 'การอัปเดตข้อมูล',
+          body: [
+            'ราคาและฟีเจอร์ของซอฟต์แวร์เปลี่ยนได้บ่อย วันที่อัปเดตบทความจึงบอกช่วงเวลาที่ตรวจข้อมูลล่าสุด',
+            'ก่อนซื้อควรตรวจสอบราคาและเงื่อนไขสุดท้ายจากเว็บไซต์ทางการเสมอ',
+          ],
+        },
+      ],
     },
     contact: { title: 'ติดต่อ', body: 'สอบถามหรือแก้ไขข้อมูล — อีเมลถึงเรา', emailLabel: 'อีเมล' },
     privacy: {
