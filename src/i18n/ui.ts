@@ -275,6 +275,112 @@ export const ui: Record<Locale, UiStrings> = {
       ctaHostinger: 'Hostinger-Preise ansehen',
     },
   },
+  fr: {
+    nav: { home: 'Accueil', about: 'À propos', testing: 'Méthode', contact: 'Contact', privacy: 'Confidentialité' },
+    disclosure: {
+      title: 'Divulgation d’affiliation',
+      text: 'Cet article peut contenir des liens d’affiliation. Nous pouvons recevoir une commission sans coût supplémentaire pour vous.',
+    },
+    footer: {
+      rights: 'Tous droits réservés.',
+      disclosure: 'Divulgation : nous pouvons percevoir des commissions sur certains achats qualifiés.',
+    },
+    home: {
+      title: 'Global Affiliate Hub : acheter mieux, dépenser moins',
+      subtitle: 'Guides sur les outils IA, logiciels SaaS, hébergement et sécurité, avec un focus sur le prix, la conformité et la valeur réelle.',
+      helpTitle: 'Comment ce site vous aide',
+      helpBullets: [
+        'Comparer les prix avant d’acheter un logiciel.',
+        'Trouver des alternatives lorsqu’un outil devient trop coûteux.',
+        'Identifier rapidement à qui un produit convient ou ne convient pas.',
+      ],
+      dealsTitle: 'Meilleures offres de la semaine',
+      dealsSubtitle: 'Accès rapide aux offres populaires. Vérifiez toujours les prix, conditions et factures disponibles avant achat.',
+      dealBadges: {
+        ai: 'IA & Marketing',
+        hosting: 'Hébergement web',
+        security: 'VPN & Sécurité',
+      },
+      dealButtons: {
+        ai: 'Voir l’offre IA',
+        hosting: 'Voir l’offre hébergement',
+        security: 'Voir l’offre sécurité',
+      },
+      latest: 'Guides récents',
+      readMore: 'Lire le guide',
+      tracksTitle: 'Parcours d’achat populaires',
+      tracks: [
+        { title: 'Outils IA', desc: 'Comparer les prix, alternatives et usages professionnels.', href: 'category/ai-tools' },
+        { title: 'Hébergement', desc: 'Choisir un hébergement fiable et adapté aux petites entreprises.', href: 'category/hosting' },
+        { title: 'Sécurité', desc: 'Comparer VPN et outils de sécurité avant de payer.', href: 'category/security' },
+      ],
+      emptyTrack: 'Aucun guide dans cette catégorie pour le moment.',
+    },
+    about: {
+      title: 'À propos',
+      body: [
+        'Global Affiliate Hub publie des guides comparatifs indépendants sur les outils IA, l’hébergement web, la sécurité et les logiciels SaaS pour petites entreprises.',
+        'Nos analyses s’appuient sur des informations publiques, des pages de prix et des notes de test lorsque disponibles. Les liens d’affiliation sont clairement signalés.',
+        'Nous n’acceptons pas de placements payants en échange d’avis positifs garantis.',
+      ],
+    },
+    testing: {
+      title: 'Notre méthode',
+      intro: 'Notre objectif est d’aider les lecteurs à prendre des décisions d’achat plus sûres et plus rationnelles. Nous ne publions pas de fausses expériences, de prix inventés ni d’avis positifs garantis.',
+      sections: [
+        {
+          heading: 'Ce que nous vérifions',
+          body: [
+            'Nous examinons les pages tarifaires publiques, limites de forfaits, fonctions clés, conditions de renouvellement, conformité et restrictions d’usage commercial lorsque disponibles.',
+            'Lorsqu’un outil n’a pas été testé directement, nous le présentons comme une analyse fondée sur la recherche et évitons toute affirmation d’usage direct.',
+          ],
+        },
+        {
+          heading: 'Comment nous comparons',
+          body: [
+            'Nous évaluons le coût total, la facilité de configuration, l’adéquation au cas d’usage, les attentes de support et la trajectoire de montée en gamme.',
+            'Nous privilégions les comparaisons proches de l’achat : prix, alternatives et choix entre outils.',
+          ],
+        },
+        {
+          heading: 'Affiliation',
+          body: [
+            'Certains liens externes peuvent devenir des liens d’affiliation après approbation partenaire. Le prix payé par le lecteur ne change pas.',
+            'Une relation d’affiliation ne garantit jamais un avis positif, un classement favorable ou une recommandation.',
+          ],
+        },
+        {
+          heading: 'Mises à jour',
+          body: [
+            'Les prix et fonctionnalités changent souvent. La date de mise à jour indique la dernière vérification du guide.',
+            'Avant tout achat, confirmez toujours le prix final, la conformité et les conditions sur le site officiel du fournisseur.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      title: 'Contact',
+      body: 'Questions, corrections ou partenariats : contactez-nous par e-mail. Nous publions des comparatifs indépendants et pouvons percevoir des commissions d’affiliation.',
+      emailLabel: 'E-mail',
+    },
+    privacy: {
+      title: 'Politique de confidentialité',
+      sections: [
+        { heading: 'Qui sommes-nous', body: 'Global Affiliate Hub est un éditeur indépendant.' },
+        { heading: 'Données collectées', body: 'Nous pouvons utiliser des outils d’analyse et les réseaux d’affiliation peuvent déposer des cookies lors des clics sortants.' },
+        { heading: 'Droits RGPD', body: 'Les visiteurs de l’UE/EEE peuvent demander l’accès ou la suppression de leurs données personnelles.' },
+        { heading: 'Liens d’affiliation', body: 'Les liens externes peuvent suivre les recommandations sans modifier le prix payé.' },
+      ],
+    },
+    article: {
+      updated: 'Dernière mise à jour',
+      ctaIntro: 'Prêt à comparer les prix et offres actuelles ?',
+      ctaPending: 'Les liens d’affiliation seront ajoutés après approbation partenaire.',
+      ctaSurfshark: 'Voir les prix Surfshark',
+      ctaNordvpn: 'Voir les prix NordVPN',
+      ctaHostinger: 'Voir les prix Hostinger',
+    },
+  },
   es: {
     nav: { home: 'Inicio', about: 'Nosotros', testing: 'Cómo probamos', contact: 'Contacto', privacy: 'Privacidad' },
     disclosure: {
@@ -380,6 +486,112 @@ export const ui: Record<Locale, UiStrings> = {
       ctaHostinger: 'Ver precios Hostinger',
     },
   },
+  pt: {
+    nav: { home: 'Início', about: 'Sobre', testing: 'Como avaliamos', contact: 'Contato', privacy: 'Privacidade' },
+    disclosure: {
+      title: 'Divulgação de afiliados',
+      text: 'Este artigo pode conter links de afiliado. Podemos receber comissão sem custo adicional para você.',
+    },
+    footer: {
+      rights: 'Todos os direitos reservados.',
+      disclosure: 'Divulgação: podemos ganhar comissões por compras qualificadas.',
+    },
+    home: {
+      title: 'Global Affiliate Hub: compre melhor e gaste menos',
+      subtitle: 'Guias de ferramentas de IA, SaaS, hospedagem e segurança com foco em preço, produtividade e retorno.',
+      helpTitle: 'Como este site ajuda você',
+      helpBullets: [
+        'Comparar preços antes de assinar uma ferramenta.',
+        'Encontrar alternativas quando um software fica caro demais.',
+        'Ver rapidamente para quem cada produto vale ou não vale a pena.',
+      ],
+      dealsTitle: 'Melhores ofertas da semana',
+      dealsSubtitle: 'Acesso rápido a ofertas populares. Confira preço e condições antes de comprar.',
+      dealBadges: {
+        ai: 'IA & Marketing',
+        hosting: 'Hospedagem web',
+        security: 'VPN & Segurança',
+      },
+      dealButtons: {
+        ai: 'Ver oferta de IA',
+        hosting: 'Ver oferta de hospedagem',
+        security: 'Ver oferta de segurança',
+      },
+      latest: 'Guias recentes',
+      readMore: 'Ler guia',
+      tracksTitle: 'Categorias de compra populares',
+      tracks: [
+        { title: 'Ferramentas de IA', desc: 'Alternativas econômicas e análise de preço para criadores.', href: 'category/ai-tools' },
+        { title: 'Hospedagem', desc: 'Hospedagem confiável e acessível para negócios digitais.', href: 'category/hosting' },
+        { title: 'Segurança', desc: 'Compare VPN e segurança antes de pagar.', href: 'category/security' },
+      ],
+      emptyTrack: 'Ainda não há guias nesta categoria.',
+    },
+    about: {
+      title: 'Sobre nós',
+      body: [
+        'Global Affiliate Hub publica comparativos independentes sobre ferramentas de IA, hospedagem, segurança e SaaS para pequenos negócios e criadores.',
+        'Nossas análises usam informações públicas, páginas de preços e notas de teste quando disponíveis. Links de afiliado são identificados com clareza.',
+        'Não aceitamos pagamentos em troca de avaliações positivas garantidas.',
+      ],
+    },
+    testing: {
+      title: 'Como avaliamos',
+      intro: 'Nosso objetivo é ajudar você a comprar com mais segurança. Não publicamos experiências falsas, preços inventados nem avaliações positivas garantidas.',
+      sections: [
+        {
+          heading: 'O que verificamos',
+          body: [
+            'Verificamos páginas públicas de preço, limites de planos, recursos principais, renovação e uso comercial quando disponível.',
+            'Quando não testamos uma ferramenta diretamente, tratamos o conteúdo como análise baseada em pesquisa e não fingimos uso prático.',
+          ],
+        },
+        {
+          heading: 'Como comparamos',
+          body: [
+            'Analisamos custo total, facilidade de uso, encaixe no caso de uso, suporte esperado e caminho de upgrade.',
+            'Priorizamos temas próximos da compra: preço, alternativas e comparações entre ferramentas.',
+          ],
+        },
+        {
+          heading: 'Afiliados',
+          body: [
+            'Alguns links externos podem virar links de afiliado após aprovação. O preço para o leitor não muda.',
+            'Afiliados não garantem avaliação positiva, ranking melhor ou recomendação.',
+          ],
+        },
+        {
+          heading: 'Atualizações',
+          body: [
+            'Preços e recursos mudam com frequência. A data de atualização mostra quando o guia foi revisado.',
+            'Antes de comprar, confirme preço final e termos no site oficial do fornecedor.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      title: 'Contato',
+      body: 'Dúvidas, correções ou parcerias: envie um e-mail. Publicamos comparativos independentes e podemos receber comissões de afiliados.',
+      emailLabel: 'E-mail',
+    },
+    privacy: {
+      title: 'Política de privacidade',
+      sections: [
+        { heading: 'Quem somos', body: 'Global Affiliate Hub é um editor independente.' },
+        { heading: 'Dados', body: 'Podemos usar análise de tráfego e redes de afiliados podem usar cookies em links externos.' },
+        { heading: 'Direitos', body: 'Visitantes podem solicitar acesso ou exclusão de dados pessoais quando aplicável.' },
+        { heading: 'Links de afiliado', body: 'Links externos podem rastrear indicações sem alterar o preço pago.' },
+      ],
+    },
+    article: {
+      updated: 'Atualizado em',
+      ctaIntro: 'Pronto para comparar preços e ofertas atuais?',
+      ctaPending: 'Os links de afiliado serão adicionados após aprovação dos parceiros.',
+      ctaSurfshark: 'Ver preços Surfshark',
+      ctaNordvpn: 'Ver preços NordVPN',
+      ctaHostinger: 'Ver preços Hostinger',
+    },
+  },
   ja: {
     nav: { home: 'ホーム', about: '概要', testing: '評価方法', contact: '連絡', privacy: 'プライバシー' },
     disclosure: {
@@ -473,6 +685,112 @@ export const ui: Record<Locale, UiStrings> = {
       ctaSurfshark: 'Surfshark料金',
       ctaNordvpn: 'NordVPN料金',
       ctaHostinger: 'Hostinger料金',
+    },
+  },
+  vn: {
+    nav: { home: 'Trang chủ', about: 'Giới thiệu', testing: 'Cách đánh giá', contact: 'Liên hệ', privacy: 'Riêng tư' },
+    disclosure: {
+      title: 'Tiết lộ liên kết tiếp thị',
+      text: 'Bài viết có thể chứa liên kết tiếp thị liên kết. Chúng tôi có thể nhận hoa hồng mà không làm tăng chi phí của bạn.',
+    },
+    footer: {
+      rights: 'Đã đăng ký bản quyền.',
+      disclosure: 'Tiết lộ: chúng tôi có thể nhận hoa hồng từ các giao dịch đủ điều kiện.',
+    },
+    home: {
+      title: 'Global Affiliate Hub: mua thông minh, tiết kiệm hơn',
+      subtitle: 'Hướng dẫn về công cụ AI, SaaS, hosting và bảo mật cho người làm MMO, bán hàng online và doanh nghiệp nhỏ.',
+      helpTitle: 'Trang này giúp bạn như thế nào',
+      helpBullets: [
+        'So sánh giá trước khi đăng ký phần mềm.',
+        'Tìm lựa chọn thay thế khi một công cụ quá đắt.',
+        'Biết nhanh công cụ nào phù hợp để làm nội dung, bán hàng và kiếm tiền online.',
+      ],
+      dealsTitle: 'Ưu đãi đáng chú ý tuần này',
+      dealsSubtitle: 'Truy cập nhanh các ưu đãi phổ biến. Hãy kiểm tra giá và điều khoản trước khi mua.',
+      dealBadges: {
+        ai: 'AI & Marketing',
+        hosting: 'Hosting website',
+        security: 'VPN & Bảo mật',
+      },
+      dealButtons: {
+        ai: 'Xem ưu đãi công cụ AI',
+        hosting: 'Xem ưu đãi hosting',
+        security: 'Xem ưu đãi bảo mật',
+      },
+      latest: 'Hướng dẫn mới nhất',
+      readMore: 'Đọc hướng dẫn',
+      tracksTitle: 'Nhóm mua phổ biến',
+      tracks: [
+        { title: 'Công cụ AI', desc: 'Tìm công cụ rẻ hơn để làm nội dung, TikTok và MMO.', href: 'category/ai-tools' },
+        { title: 'Hosting', desc: 'Chọn hosting để làm website bán hàng, blog hoặc landing page.', href: 'category/hosting' },
+        { title: 'Bảo mật', desc: 'So sánh VPN và công cụ bảo mật trước khi trả tiền.', href: 'category/security' },
+      ],
+      emptyTrack: 'Chưa có bài viết trong danh mục này.',
+    },
+    about: {
+      title: 'Giới thiệu',
+      body: [
+        'Global Affiliate Hub xuất bản các bài so sánh độc lập về công cụ AI, hosting, bảo mật và SaaS cho người làm nội dung, freelancer và doanh nghiệp nhỏ.',
+        'Chúng tôi dựa trên thông tin công khai, trang giá và ghi chú thử nghiệm khi có. Liên kết tiếp thị được nêu rõ.',
+        'Chúng tôi không nhận tiền để đảm bảo đánh giá tích cực.',
+      ],
+    },
+    testing: {
+      title: 'Cách chúng tôi đánh giá',
+      intro: 'Mục tiêu là giúp người đọc mua an toàn hơn. Chúng tôi không bịa trải nghiệm, không bịa giá và không đảm bảo đánh giá tích cực vì thù lao.',
+      sections: [
+        {
+          heading: 'Chúng tôi kiểm tra gì',
+          body: [
+            'Chúng tôi xem trang giá công khai, giới hạn gói, tính năng chính, điều khoản gia hạn và điều kiện dùng thương mại khi có.',
+            'Nếu chưa trực tiếp dùng công cụ, chúng tôi mô tả là phân tích dựa trên nghiên cứu và không giả vờ đã trải nghiệm.',
+          ],
+        },
+        {
+          heading: 'Cách so sánh',
+          body: [
+            'Chúng tôi tập trung vào tổng chi phí, độ dễ dùng, mức phù hợp với nhu cầu, hỗ trợ và khả năng nâng cấp.',
+            'Ưu tiên các chủ đề gần quyết định mua: giá, lựa chọn thay thế và so sánh công cụ.',
+          ],
+        },
+        {
+          heading: 'Tiếp thị liên kết',
+          body: [
+            'Một số liên kết ngoài có thể trở thành liên kết tiếp thị sau khi được duyệt. Giá người đọc trả không thay đổi.',
+            'Quan hệ tiếp thị liên kết không đảm bảo đánh giá tích cực hay thứ hạng tốt hơn.',
+          ],
+        },
+        {
+          heading: 'Cập nhật',
+          body: [
+            'Giá và tính năng phần mềm thay đổi thường xuyên. Ngày cập nhật cho biết thời điểm nội dung được rà soát.',
+            'Trước khi mua, hãy kiểm tra giá và điều khoản cuối cùng trên website chính thức.',
+          ],
+        },
+      ],
+    },
+    contact: {
+      title: 'Liên hệ',
+      body: 'Nếu có câu hỏi, góp ý hoặc hợp tác, hãy gửi email cho chúng tôi. Chúng tôi xuất bản so sánh độc lập và có thể nhận hoa hồng tiếp thị liên kết.',
+      emailLabel: 'Email',
+    },
+    privacy: {
+      title: 'Chính sách riêng tư',
+      sections: [
+        { heading: 'Chúng tôi là ai', body: 'Global Affiliate Hub là nhà xuất bản độc lập.' },
+        { heading: 'Dữ liệu', body: 'Chúng tôi có thể dùng phân tích truy cập và mạng tiếp thị có thể dùng cookie khi bạn nhấp liên kết ngoài.' },
+        { heading: 'Quyền của bạn', body: 'Bạn có thể yêu cầu truy cập hoặc xóa dữ liệu cá nhân khi luật áp dụng cho phép.' },
+        { heading: 'Liên kết tiếp thị', body: 'Liên kết ngoài có thể theo dõi giới thiệu mà không thay đổi giá bạn trả.' },
+      ],
+    },
+    article: {
+      updated: 'Cập nhật lần cuối',
+      ctaIntro: 'Sẵn sàng so sánh giá và ưu đãi hiện tại?',
+      ctaPending: 'Liên kết tiếp thị sẽ được thêm sau khi đối tác phê duyệt.',
+      ctaSurfshark: 'Xem giá Surfshark',
+      ctaNordvpn: 'Xem giá NordVPN',
+      ctaHostinger: 'Xem giá Hostinger',
     },
   },
   th: {

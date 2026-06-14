@@ -15,13 +15,16 @@ export const AFFILIATE_LINKS = {
 export const isRealAffiliateLink = (url: string) =>
   /^https?:\/\//.test(url) && !/YOUR-|example\.com/i.test(url);
 
-export const LOCALES = ['en', 'de', 'es', 'ja', 'th'] as const;
+export const LOCALES = ['en', 'de', 'ja', 'fr', 'es', 'pt', 'th', 'vn'] as const;
 export type Locale = (typeof LOCALES)[number];
 
 export const LOCALE_LABELS: Record<Locale, string> = {
   en: 'English',
   de: 'Deutsch',
-  es: 'Español',
   ja: '日本語',
+  fr: 'Français',
+  es: 'Español',
+  pt: 'Português',
   th: 'ไทย',
+  vn: 'Tiếng Việt',
 };

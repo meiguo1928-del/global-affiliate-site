@@ -5,7 +5,7 @@ const articles = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    lang: z.enum(['en', 'de', 'es', 'ja', 'th']),
+    lang: z.enum(['en', 'de', 'ja', 'fr', 'es', 'pt', 'th', 'vn']),
     date: z.coerce.date(),
     updated: z.coerce.date().optional(),
     permalink: z.string(),
@@ -14,9 +14,12 @@ const articles = defineCollection({
       .object({
         en: z.string().optional(),
         de: z.string().optional(),
-        es: z.string().optional(),
         ja: z.string().optional(),
+        fr: z.string().optional(),
+        es: z.string().optional(),
+        pt: z.string().optional(),
         th: z.string().optional(),
+        vn: z.string().optional(),
       })
       .optional(),
     keywords: z.array(z.string()).optional(),
