@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
-import { AFFILIATE_LINKS, LOCALES, type Locale } from '../../config';
+import { AFFILIATE_LINKS, LOCALES, type Locale, isRealAffiliateLink } from '../../config';
 import { ui } from '../../i18n/ui';
 import { localePath } from '../../utils/locale';
 
@@ -31,18 +31,45 @@ const articles = (await getCollection('articles'))
     <h2>{t.dealsTitle}</h2>
     <p>{t.dealsSubtitle}</p>
     <div class="deals-grid">
-      <a class="deal-item" href={AFFILIATE_LINKS.surfshark} rel="nofollow sponsored" target="_blank">
-        <span class="deal-badge">{t.dealBadges.ai}</span>
-        <strong>{t.dealButtons.ai}</strong>
-      </a>
-      <a class="deal-item" href={AFFILIATE_LINKS.hostinger} rel="nofollow sponsored" target="_blank">
-        <span class="deal-badge">{t.dealBadges.hosting}</span>
-        <strong>{t.dealButtons.hosting}</strong>
-      </a>
-      <a class="deal-item" href={AFFILIATE_LINKS.nordvpn} rel="nofollow sponsored" target="_blank">
-        <span class="deal-badge">{t.dealBadges.security}</span>
-        <strong>{t.dealButtons.security}</strong>
-      </a>
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.surfshark) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.surfshark} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.ai}</span>
+            <strong>{t.dealButtons.ai}</strong>
+          </a>
+        ) : (
+          <div class="deal-item deal-disabled">
+            <span class="deal-badge">{t.dealBadges.ai}</span>
+            <strong>{t.dealButtons.ai}</strong>
+          </div>
+        )
+      }
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.hostinger) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.hostinger} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.hosting}</span>
+            <strong>{t.dealButtons.hosting}</strong>
+          </a>
+        ) : (
+          <div class="deal-item deal-disabled">
+            <span class="deal-badge">{t.dealBadges.hosting}</span>
+            <strong>{t.dealButtons.hosting}</strong>
+          </div>
+        )
+      }
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.nordvpn) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.nordvpn} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.security}</span>
+            <strong>{t.dealButtons.security}</strong>
+          </a>
+        ) : (
+          <div class="deal-item deal-disabled">
+            <span class="deal-badge">{t.dealBadges.security}</span>
+            <strong>{t.dealButtons.security}</strong>
+          </div>
+        )
+      }
     </div>
   </section>
 

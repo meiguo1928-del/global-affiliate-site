@@ -22,7 +22,14 @@ type UiStrings = {
   about: { title: string; body: string[] };
   contact: { title: string; body: string; emailLabel: string };
   privacy: { title: string; sections: { heading: string; body: string }[] };
-  article: { updated: string; ctaSurfshark: string; ctaNordvpn: string };
+  article: {
+    updated: string;
+    ctaIntro: string;
+    ctaPending: string;
+    ctaSurfshark: string;
+    ctaNordvpn: string;
+    ctaHostinger: string;
+  };
 };
 
 export const ui: Record<Locale, UiStrings> = {
@@ -104,8 +111,11 @@ export const ui: Record<Locale, UiStrings> = {
     },
     article: {
       updated: 'Last updated',
+      ctaIntro: 'Ready to compare live pricing and current deals?',
+      ctaPending: 'Affiliate links will be added after partner approval.',
       ctaSurfshark: 'Check Surfshark pricing',
       ctaNordvpn: 'Check NordVPN pricing',
+      ctaHostinger: 'Check Hostinger pricing',
     },
   },
   de: {
@@ -185,8 +195,11 @@ export const ui: Record<Locale, UiStrings> = {
     },
     article: {
       updated: 'Zuletzt aktualisiert',
+      ctaIntro: 'Bereit, aktuelle Preise und Angebote zu vergleichen?',
+      ctaPending: 'Affiliate-Links werden nach Partnerfreigabe ergänzt.',
       ctaSurfshark: 'Surfshark-Preise ansehen',
       ctaNordvpn: 'NordVPN-Preise ansehen',
+      ctaHostinger: 'Hostinger-Preise ansehen',
     },
   },
   es: {
@@ -251,7 +264,14 @@ export const ui: Record<Locale, UiStrings> = {
         { heading: 'Enlaces de afiliado', body: 'Los enlaces externos pueden rastrear referidos sin cambiar su precio.' },
       ],
     },
-    article: { updated: 'Actualizado', ctaSurfshark: 'Ver precios Surfshark', ctaNordvpn: 'Ver precios NordVPN' },
+    article: {
+      updated: 'Actualizado',
+      ctaIntro: '¿Listo para comparar precios y ofertas actuales?',
+      ctaPending: 'Los enlaces de afiliado se añadirán después de la aprobación.',
+      ctaSurfshark: 'Ver precios Surfshark',
+      ctaNordvpn: 'Ver precios NordVPN',
+      ctaHostinger: 'Ver precios Hostinger',
+    },
   },
   ja: {
     nav: { home: 'ホーム', about: '概要', contact: '連絡', privacy: 'プライバシー' },
@@ -305,7 +325,14 @@ export const ui: Record<Locale, UiStrings> = {
         { heading: 'アフィリエイト', body: '外部リンクはトラッキングする場合があります。' },
       ],
     },
-    article: { updated: '更新日', ctaSurfshark: 'Surfshark料金', ctaNordvpn: 'NordVPN料金' },
+    article: {
+      updated: '更新日',
+      ctaIntro: '最新価格とキャンペーンを比較しますか？',
+      ctaPending: 'アフィリエイトリンクは承認後に追加されます。',
+      ctaSurfshark: 'Surfshark料金',
+      ctaNordvpn: 'NordVPN料金',
+      ctaHostinger: 'Hostinger料金',
+    },
   },
   th: {
     nav: { home: 'หน้าแรก', about: 'เกี่ยวกับ', contact: 'ติดต่อ', privacy: 'ความเป็นส่วนตัว' },
@@ -359,6 +386,13 @@ export const ui: Record<Locale, UiStrings> = {
         { heading: 'ลิงก์พันธมิตร', body: 'ลิงก์ภายนอกอาจติดตามการอ้างอิง' },
       ],
     },
-    article: { updated: 'อัปเดต', ctaSurfshark: 'ดูราคา Surfshark', ctaNordvpn: 'ดูราคา NordVPN' },
+    article: {
+      updated: 'อัปเดต',
+      ctaIntro: 'พร้อมเปรียบเทียบราคาและดีลล่าสุดหรือยัง?',
+      ctaPending: 'ลิงก์พันธมิตรจะถูกเพิ่มหลังจากได้รับอนุมัติ',
+      ctaSurfshark: 'ดูราคา Surfshark',
+      ctaNordvpn: 'ดูราคา NordVPN',
+      ctaHostinger: 'ดูราคา Hostinger',
+    },
   },
 };

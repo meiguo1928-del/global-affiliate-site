@@ -1,7 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
-import { AFFILIATE_LINKS, type Locale } from '../config';
+import { AFFILIATE_LINKS, isRealAffiliateLink, type Locale } from '../config';
 import { ui } from '../i18n/ui';
 
 interface Props {
@@ -17,6 +17,13 @@ interface Props {
 
 const { title, description, lang, slug, date, updated, alternates, keywords } = Astro.props;
 const t = ui[lang].article;
+const joinedKeywords = (keywords ?? []).join(' ').toLowerCase();
+const ctaLinks = joinedKeywords.includes('hosting')
+  ? [{ href: AFFILIATE_LINKS.hostinger, label: t.ctaHostinger }]
+  : [
+      { href: AFFILIATE_LINKS.surfshark, label: t.ctaSurfshark },
+      { href: AFFILIATE_LINKS.nordvpn, label: t.ctaNordvpn },
+    ];
 const fmt = (d: Date) =>
   d.toLocaleDateString(lang === 'en' ? 'en-US' : lang, {
     year: 'numeric',
@@ -41,14 +48,20 @@ const fmt = (d: Date) =>
     </p>
     <slot />
     <div class="cta-box">
-      <p>Ready to compare live pricing and current deals?</p>
-      <a class="cta-btn" href={AFFILIATE_LINKS.surfshark} rel="nofollow sponsored" target="_blank">
-        {t.ctaSurfshark}
-      </a>
-      &nbsp;
-      <a class="cta-btn" href={AFFILIATE_LINKS.nordvpn} rel="nofollow sponsored" target="_blank">
-        {t.ctaNordvpn}
-      </a>
+      <p>{t.ctaIntro}</p>
+      {
+        ctaLinks.some((link) => isRealAffiliateLink(link.href)) ? (
+          ctaLinks.map((link) =>
+            isRealAffiliateLink(link.href) ? (
+              <a class="cta-btn" href={link.href} rel="nofollow sponsored" target="_blank">
+                {link.label}
+              </a>
+            ) : null,
+          )
+        ) : (
+          <p class="cta-pending">{t.ctaPending}</p>
+        )
+      }
     </div>
   </article>
 </BaseLayout>

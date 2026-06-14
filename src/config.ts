@@ -1,6 +1,6 @@
 export const SITE = {
   name: 'Global Affiliate Hub',
-  url: 'https://global-affiliate-site.pages.dev',
+  url: 'https://global-affiliate-site.meiguo1928.workers.dev',
   author: 'SmartChoice Team',
   email: 'meiguo1928@gmail.com',
 } as const;
@@ -11,6 +11,9 @@ export const AFFILIATE_LINKS = {
   nordvpn: 'https://YOUR-NORDVPN-AFFILIATE-LINK',
   hostinger: 'https://YOUR-HOSTINGER-AFFILIATE-LINK',
 } as const;
+
+export const isRealAffiliateLink = (url: string) =>
+  /^https?:\/\//.test(url) && !/YOUR-|example\.com/i.test(url);
 
 export const LOCALES = ['en', 'de', 'es', 'ja', 'th'] as const;
 export type Locale = (typeof LOCALES)[number];
