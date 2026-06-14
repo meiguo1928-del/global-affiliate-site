@@ -1,7 +1,7 @@
 export const SITE = {
-  name: 'Global Affiliate Hub',
+  name: 'Tool Scout Lab',
   url: 'https://global-affiliate-site.meiguo1928.workers.dev',
-  author: 'SmartChoice Team',
+  author: 'Tool Scout Lab Team',
   email: 'meiguo1928@gmail.com',
 } as const;
 

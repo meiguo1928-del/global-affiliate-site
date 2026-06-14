@@ -49,7 +49,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Affiliate Disclosure: We earn commissions from qualifying purchases.',
     },
     home: {
-      title: 'Global Affiliate Hub: Buy Better, Spend Less',
+      title: 'Tool Scout Lab: Buy Better, Spend Less',
       subtitle: 'AI tools, business software, hosting, and security guides focused on price, value, and results.',
       helpTitle: 'How this site helps you',
       helpBullets: [
@@ -82,7 +82,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'About Us',
       body: [
-        'Global Affiliate Hub publishes independent comparison guides for AI tools, web hosting, security software, and small-business SaaS.',
+        'Tool Scout Lab publishes independent comparison guides for AI tools, web hosting, security software, and small-business SaaS.',
         'Our reviews are based on publicly available specs, pricing pages, and hands-on testing notes where applicable. We clearly label affiliate links.',
         'We do not accept paid placements in exchange for guaranteed positive reviews.',
         'We serve readers worldwide in multiple languages.',
@@ -132,7 +132,7 @@ export const ui: Record<Locale, UiStrings> = {
       sections: [
         {
           heading: 'Who we are',
-          body: 'Global Affiliate Hub operates this website as an independent publisher. Please use our Contact page for support requests.',
+          body: 'Tool Scout Lab operates this website as an independent publisher. Please use our Contact page for support requests.',
         },
         {
           heading: 'Data we collect',
@@ -168,7 +168,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Affiliate-Hinweis: Wir verdienen Provisionen bei qualifizierten Käufen.',
     },
     home: {
-      title: 'Global Affiliate Hub: Besser kaufen, weniger zahlen',
+      title: 'Tool Scout Lab: Besser kaufen, weniger zahlen',
       subtitle: 'Vergleiche zu KI-Tools, Business-Software, Hosting und Sicherheit — mit Fokus auf Preis und Nutzen.',
       helpTitle: 'So hilft dir diese Website',
       helpBullets: [
@@ -201,7 +201,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'Über uns',
       body: [
-        'Global Affiliate Hub veröffentlicht unabhängige Vergleichsratgeber zu KI-Tools, Webhosting, Sicherheitssoftware und SaaS für kleine Unternehmen.',
+        'Tool Scout Lab veröffentlicht unabhängige Vergleichsratgeber zu KI-Tools, Webhosting, Sicherheitssoftware und SaaS für kleine Unternehmen.',
         'Unsere Bewertungen basieren auf öffentlichen Spezifikationen, Preisseiten und — wo möglich — eigenen Tests. Affiliate-Links sind gekennzeichnet.',
         'Wir erreichen Leser weltweit in mehreren Sprachen.',
       ],
@@ -250,7 +250,7 @@ export const ui: Record<Locale, UiStrings> = {
       sections: [
         {
           heading: 'Verantwortlicher',
-          body: 'Global Affiliate Hub betreibt diese Website als unabhängiger Publisher. Für Anfragen nutzen Sie bitte die Kontaktseite.',
+          body: 'Tool Scout Lab betreibt diese Website als unabhängiger Publisher. Für Anfragen nutzen Sie bitte die Kontaktseite.',
         },
         {
           heading: 'Erhobene Daten',
@@ -286,7 +286,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgation : nous pouvons percevoir des commissions sur certains achats qualifiés.',
     },
     home: {
-      title: 'Global Affiliate Hub : acheter mieux, dépenser moins',
+      title: 'Tool Scout Lab : acheter mieux, dépenser moins',
       subtitle: 'Guides sur les outils IA, logiciels SaaS, hébergement et sécurité, avec un focus sur le prix, la conformité et la valeur réelle.',
       helpTitle: 'Comment ce site vous aide',
       helpBullets: [
@@ -319,7 +319,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'À propos',
       body: [
-        'Global Affiliate Hub publie des guides comparatifs indépendants sur les outils IA, l’hébergement web, la sécurité et les logiciels SaaS pour petites entreprises.',
+        'Tool Scout Lab publie des guides comparatifs indépendants sur les outils IA, l’hébergement web, la sécurité et les logiciels SaaS pour petites entreprises.',
         'Nos analyses s’appuient sur des informations publiques, des pages de prix et des notes de test lorsque disponibles. Les liens d’affiliation sont clairement signalés.',
         'Nous n’acceptons pas de placements payants en échange d’avis positifs garantis.',
       ],
@@ -366,7 +366,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'Politique de confidentialité',
       sections: [
-        { heading: 'Qui sommes-nous', body: 'Global Affiliate Hub est un éditeur indépendant.' },
+        { heading: 'Qui sommes-nous', body: 'Tool Scout Lab est un éditeur indépendant.' },
         { heading: 'Données collectées', body: 'Nous pouvons utiliser des outils d’analyse et les réseaux d’affiliation peuvent déposer des cookies lors des clics sortants.' },
         { heading: 'Droits RGPD', body: 'Les visiteurs de l’UE/EEE peuvent demander l’accès ou la suppression de leurs données personnelles.' },
         { heading: 'Liens d’affiliation', body: 'Les liens externes peuvent suivre les recommandations sans modifier le prix payé.' },
@@ -392,7 +392,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgación: ganamos comisiones por compras calificadas.',
     },
     home: {
-      title: 'Global Affiliate Hub: compra mejor y gasta menos',
+      title: 'Tool Scout Lab: compra mejor y gasta menos',
       subtitle: 'Guías de herramientas de IA, software empresarial, hosting y seguridad enfocadas en valor real.',
       helpTitle: 'Cómo te ayuda este sitio',
       helpBullets: [
@@ -425,7 +425,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'Sobre nosotros',
       body: [
-        'Global Affiliate Hub publica comparativas independientes de herramientas de IA, hosting, seguridad y software para pequeños negocios.',
+        'Tool Scout Lab publica comparativas independientes de herramientas de IA, hosting, seguridad y software para pequeños negocios.',
         'Nuestras reseñas se basan en especificaciones públicas y precios oficiales. Los enlaces de afiliado están claramente indicados.',
       ],
     },
@@ -471,7 +471,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'Política de privacidad',
       sections: [
-        { heading: 'Quiénes somos', body: 'Global Affiliate Hub opera este sitio como editor independiente.' },
+        { heading: 'Quiénes somos', body: 'Tool Scout Lab opera este sitio como editor independiente.' },
         { heading: 'Datos', body: 'Usamos Google Analytics. Los enlaces de afiliado pueden usar cookies.' },
         { heading: 'Derechos GDPR', body: 'Los visitantes de la UE pueden solicitar acceso o eliminación de datos.' },
         { heading: 'Enlaces de afiliado', body: 'Los enlaces externos pueden rastrear referidos sin cambiar su precio.' },
@@ -497,7 +497,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgação: podemos ganhar comissões por compras qualificadas.',
     },
     home: {
-      title: 'Global Affiliate Hub: compre melhor e gaste menos',
+      title: 'Tool Scout Lab: compre melhor e gaste menos',
       subtitle: 'Guias de ferramentas de IA, SaaS, hospedagem e segurança com foco em preço, produtividade e retorno.',
       helpTitle: 'Como este site ajuda você',
       helpBullets: [
@@ -530,7 +530,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'Sobre nós',
       body: [
-        'Global Affiliate Hub publica comparativos independentes sobre ferramentas de IA, hospedagem, segurança e SaaS para pequenos negócios e criadores.',
+        'Tool Scout Lab publica comparativos independentes sobre ferramentas de IA, hospedagem, segurança e SaaS para pequenos negócios e criadores.',
         'Nossas análises usam informações públicas, páginas de preços e notas de teste quando disponíveis. Links de afiliado são identificados com clareza.',
         'Não aceitamos pagamentos em troca de avaliações positivas garantidas.',
       ],
@@ -577,7 +577,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'Política de privacidade',
       sections: [
-        { heading: 'Quem somos', body: 'Global Affiliate Hub é um editor independente.' },
+        { heading: 'Quem somos', body: 'Tool Scout Lab é um editor independente.' },
         { heading: 'Dados', body: 'Podemos usar análise de tráfego e redes de afiliados podem usar cookies em links externos.' },
         { heading: 'Direitos', body: 'Visitantes podem solicitar acesso ou exclusão de dados pessoais quando aplicável.' },
         { heading: 'Links de afiliado', body: 'Links externos podem rastrear indicações sem alterar o preço pago.' },
@@ -600,7 +600,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
     footer: { rights: '無断転載禁止', disclosure: 'アフィリエイトリンクにより報酬を得る場合があります。' },
     home: {
-      title: 'Global Affiliate Hub: 賢く買って無駄を減らす',
+      title: 'Tool Scout Lab: 賢く買って無駄を減らす',
       subtitle: 'AIツール、ビジネスソフト、ホスティング、セキュリティ製品を価格重視で比較。',
       helpTitle: 'このサイトでできること',
       helpBullets: [
@@ -632,7 +632,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
     about: {
       title: 'サイトについて',
-      body: ['Global Affiliate HubはAIツール、ホスティング、セキュリティ製品の独立比較記事を公開しています。'],
+      body: ['Tool Scout LabはAIツール、ホスティング、セキュリティ製品の独立比較記事を公開しています。'],
     },
     testing: {
       title: '評価方法',
@@ -672,7 +672,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'プライバシーポリシー',
       sections: [
-        { heading: '運営者', body: 'Global Affiliate Hubが運営する独立メディアです。' },
+        { heading: '運営者', body: 'Tool Scout Labが運営する独立メディアです。' },
         { heading: '収集データ', body: 'Google Analyticsを使用します。' },
         { heading: 'GDPR', body: 'EU訪問者はデータ削除を請求できます。' },
         { heading: 'アフィリエイト', body: '外部リンクはトラッキングする場合があります。' },
@@ -698,7 +698,7 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Tiết lộ: chúng tôi có thể nhận hoa hồng từ các giao dịch đủ điều kiện.',
     },
     home: {
-      title: 'Global Affiliate Hub: mua thông minh, tiết kiệm hơn',
+      title: 'Tool Scout Lab: mua thông minh, tiết kiệm hơn',
       subtitle: 'Hướng dẫn về công cụ AI, SaaS, hosting và bảo mật cho người làm MMO, bán hàng online và doanh nghiệp nhỏ.',
       helpTitle: 'Trang này giúp bạn như thế nào',
       helpBullets: [
@@ -731,7 +731,7 @@ export const ui: Record<Locale, UiStrings> = {
     about: {
       title: 'Giới thiệu',
       body: [
-        'Global Affiliate Hub xuất bản các bài so sánh độc lập về công cụ AI, hosting, bảo mật và SaaS cho người làm nội dung, freelancer và doanh nghiệp nhỏ.',
+        'Tool Scout Lab xuất bản các bài so sánh độc lập về công cụ AI, hosting, bảo mật và SaaS cho người làm nội dung, freelancer và doanh nghiệp nhỏ.',
         'Chúng tôi dựa trên thông tin công khai, trang giá và ghi chú thử nghiệm khi có. Liên kết tiếp thị được nêu rõ.',
         'Chúng tôi không nhận tiền để đảm bảo đánh giá tích cực.',
       ],
@@ -778,7 +778,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'Chính sách riêng tư',
       sections: [
-        { heading: 'Chúng tôi là ai', body: 'Global Affiliate Hub là nhà xuất bản độc lập.' },
+        { heading: 'Chúng tôi là ai', body: 'Tool Scout Lab là nhà xuất bản độc lập.' },
         { heading: 'Dữ liệu', body: 'Chúng tôi có thể dùng phân tích truy cập và mạng tiếp thị có thể dùng cookie khi bạn nhấp liên kết ngoài.' },
         { heading: 'Quyền của bạn', body: 'Bạn có thể yêu cầu truy cập hoặc xóa dữ liệu cá nhân khi luật áp dụng cho phép.' },
         { heading: 'Liên kết tiếp thị', body: 'Liên kết ngoài có thể theo dõi giới thiệu mà không thay đổi giá bạn trả.' },
@@ -801,7 +801,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
     footer: { rights: 'สงวนลิขสิทธิ์', disclosure: 'เราได้รับค่าคอมมิชชันจากการซื้อที่มีสิทธิ์' },
     home: {
-      title: 'Global Affiliate Hub: ซื้อคุ้ม ใช้น้อยจ่ายน้อย',
+      title: 'Tool Scout Lab: ซื้อคุ้ม ใช้น้อยจ่ายน้อย',
       subtitle: 'คู่มือเปรียบเทียบเครื่องมือ AI ซอฟต์แวร์ธุรกิจ โฮสติ้ง และความปลอดภัย เน้นความคุ้มค่า',
       helpTitle: 'เว็บไซต์นี้ช่วยคุณอย่างไร',
       helpBullets: [
@@ -833,7 +833,7 @@ export const ui: Record<Locale, UiStrings> = {
     },
     about: {
       title: 'เกี่ยวกับเรา',
-      body: ['Global Affiliate Hub เผยแพร่คู่มือเปรียบเทียบเครื่องมือ AI โฮสติ้ง และความปลอดภัยแบบอิสระ'],
+      body: ['Tool Scout Lab เผยแพร่คู่มือเปรียบเทียบเครื่องมือ AI โฮสติ้ง และความปลอดภัยแบบอิสระ'],
     },
     testing: {
       title: 'วิธีรีวิวของเรา',
@@ -873,7 +873,7 @@ export const ui: Record<Locale, UiStrings> = {
     privacy: {
       title: 'นโยบายความเป็นส่วนตัว',
       sections: [
-        { heading: 'ผู้ดำเนินการ', body: 'Global Affiliate Hub เป็นสื่ออิสระ' },
+        { heading: 'ผู้ดำเนินการ', body: 'Tool Scout Lab เป็นสื่ออิสระ' },
         { heading: 'ข้อมูล', body: 'ใช้ Google Analytics ลิงก์พันธมิตรอาจใช้คุกกี้' },
         { heading: 'GDPR', body: 'ผู้เยี่ยมชม EU ขอลบข้อมูลได้' },
         { heading: 'ลิงก์พันธมิตร', body: 'ลิงก์ภายนอกอาจติดตามการอ้างอิง' },
