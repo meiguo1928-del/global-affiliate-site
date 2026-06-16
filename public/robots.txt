@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://global-affiliate-site.meiguo1928.workers.dev/sitemap-index.xml
+Sitemap: https://toolscoutlab.com/sitemap-index.xml
