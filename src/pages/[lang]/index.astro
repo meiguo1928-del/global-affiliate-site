@@ -11,6 +11,16 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Locale };
 const t = ui[lang].home;
+const trustBadges: Record<Locale, string[]> = {
+  en: ['Independent comparisons', 'Pricing checked', 'Affiliate links disclosed'],
+  de: ['Unabhängige Vergleiche', 'Preise geprüft', 'Affiliate-Links offengelegt'],
+  ja: ['独立した比較', '価格確認済み', '提携リンクを明示'],
+  fr: ['Comparatifs indépendants', 'Prix vérifiés', 'Affiliation signalée'],
+  es: ['Comparativas independientes', 'Precios verificados', 'Afiliación clara'],
+  pt: ['Comparativos independentes', 'Preços verificados', 'Afiliados sinalizados'],
+  th: ['เปรียบเทียบอิสระ', 'ตรวจสอบราคาแล้ว', 'เปิดเผยลิงก์พันธมิตร'],
+  vn: ['So sánh độc lập', 'Giá đã kiểm tra', 'Liên kết tiếp thị rõ ràng'],
+};
 
 const articles = (await getCollection('articles'))
   .filter((a) => a.data.lang === lang)
@@ -18,13 +28,19 @@ const articles = (await getCollection('articles'))
 ---
 
 <BaseLayout title={t.title} description={t.subtitle} lang={lang} subPath="">
-  <h1>{t.title}</h1>
-  <p class="hero-sub">{t.subtitle}</p>
-  <section class="quick-note">
-    <strong>{t.helpTitle}:</strong>
-    <ul>
-      {t.helpBullets.map((b) => <li>{b}</li>)}
-    </ul>
+  <section class="hero-panel">
+    <p class="eyebrow">Tool Scout Lab</p>
+    <h1>{t.title}</h1>
+    <p class="hero-sub">{t.subtitle}</p>
+    <div class="trust-row" aria-label="Trust signals">
+      {trustBadges[lang].map((badge) => <span>{badge}</span>)}
+    </div>
+    <section class="quick-note">
+      <strong>{t.helpTitle}:</strong>
+      <ul>
+        {t.helpBullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </section>
   </section>
 
   <section class="deals-box">
@@ -73,27 +89,35 @@ const articles = (await getCollection('articles'))
     </div>
   </section>
 
-  <h2>{t.tracksTitle}</h2>
-  <div class="track-grid">
-    {
-      t.tracks.map((track) => (
-        <a class="track-card" href={localePath(lang, track.href)}>
-          <h3>{track.title}</h3>
-          <p>{track.desc}</p>
-        </a>
-      ))
-    }
-  </div>
+  <section class="section-block">
+    <h2>{t.tracksTitle}</h2>
+    <div class="track-grid">
+      {
+        t.tracks.map((track) => (
+          <a class="track-card" href={localePath(lang, track.href)}>
+            <span class="track-kicker">{track.title}</span>
+            <h3>{track.title}</h3>
+            <p>{track.desc}</p>
+            <span class="card-action">{t.readMore}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 
-  <h2>{t.latest}</h2>
-  <div class="card-grid">
-    {
-      articles.map((article) => (
-        <a class="card" href={localePath(lang, article.data.permalink)}>
-          <h3>{article.data.title}</h3>
-          <p>{article.data.description}</p>
-        </a>
-      ))
-    }
-  </div>
+  <section class="section-block">
+    <h2>{t.latest}</h2>
+    <div class="card-grid">
+      {
+        articles.map((article) => (
+          <a class="card" href={localePath(lang, article.data.permalink)}>
+            <span class="article-lang">{article.data.lang.toUpperCase()}</span>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.description}</p>
+            <span class="card-action">{t.readMore}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
 </BaseLayout>
