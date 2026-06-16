@@ -339,6 +339,50 @@ const { title, description, lang, subPath = '', alternates, keywords } = Astro.p
   .section-block {
     margin-top: 1.9rem;
   }
+  .category-hero {
+    background: rgba(255, 255, 255, 0.76);
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 24px;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    margin-bottom: 1.4rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+  }
+  .category-hero span {
+    display: inline-block;
+    margin-bottom: 0.55rem;
+    color: #0f766e;
+    background: #ecfdf5;
+    border: 1px solid #bbf7d0;
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+  article {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  article > h1 {
+    font-size: clamp(1.85rem, 4vw, 2.55rem);
+  }
+  article p,
+  article li {
+    font-size: 1rem;
+  }
+  article h2 {
+    padding-top: 0.35rem;
+  }
+  .article-hero {
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    border-radius: 24px;
+    padding: clamp(1.1rem, 3vw, 1.8rem);
+    margin-bottom: 1.35rem;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.07);
+  }
+  .article-hero .disclosure {
+    margin-bottom: 1.2rem;
+  }
   @media (max-width: 720px) {
     .main {
       padding-top: 1.35rem;

@@ -88,6 +88,16 @@ export async function getStaticPaths() {
 const { lang, slug } = Astro.params as { lang: Locale; slug: CategorySlug };
 const category = categoryDefs[slug];
 const t = ui[lang].home;
+const categoryTrust: Record<Locale, string> = {
+  en: 'Independent guides sorted by practical buying intent.',
+  de: 'Unabhängige Ratgeber nach praktischer Kaufabsicht sortiert.',
+  ja: '購入意図に合わせた独立ガイドです。',
+  fr: 'Guides indépendants classés par intention d’achat.',
+  es: 'Guías independientes ordenadas por intención de compra.',
+  pt: 'Guias independentes organizados por intenção de compra.',
+  th: 'คู่มืออิสระตามเจตนาการซื้อจริง',
+  vn: 'Hướng dẫn độc lập theo nhu cầu mua thực tế.',
+};
 
 const allArticles = (await getCollection('articles'))
   .filter((a) => a.data.lang === lang)
@@ -102,16 +112,21 @@ const articles = allArticles.filter((a) => category.test.test((a.data.keywords ?
   lang={lang}
   subPath={`category/${slug}`}
 >
-  <h1>{category.title[lang]}</h1>
-  <p class="hero-sub">{category.desc[lang]}</p>
+  <section class="category-hero">
+    <span>{categoryTrust[lang]}</span>
+    <h1>{category.title[lang]}</h1>
+    <p class="hero-sub">{category.desc[lang]}</p>
+  </section>
 
   {
     articles.length > 0 ? (
       <div class="card-grid">
         {articles.map((article) => (
           <a class="card" href={localePath(lang, article.data.permalink)}>
+            <span class="article-lang">{article.data.lang.toUpperCase()}</span>
             <h3>{article.data.title}</h3>
             <p>{article.data.description}</p>
+            <span class="card-action">{t.readMore}</span>
           </a>
         ))}
       </div>

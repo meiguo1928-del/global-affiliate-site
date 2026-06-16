@@ -54,10 +54,10 @@ const articles = (await getCollection('articles'))
             <strong>{t.dealButtons.ai}</strong>
           </a>
         ) : (
-          <div class="deal-item deal-disabled">
+          <a class="deal-item" href={localePath(lang, 'category/ai-tools')}>
             <span class="deal-badge">{t.dealBadges.ai}</span>
             <strong>{t.dealButtons.ai}</strong>
-          </div>
+          </a>
         )
       }
       {
@@ -67,10 +67,10 @@ const articles = (await getCollection('articles'))
             <strong>{t.dealButtons.hosting}</strong>
           </a>
         ) : (
-          <div class="deal-item deal-disabled">
+          <a class="deal-item" href={localePath(lang, 'category/hosting')}>
             <span class="deal-badge">{t.dealBadges.hosting}</span>
             <strong>{t.dealButtons.hosting}</strong>
-          </div>
+          </a>
         )
       }
       {
@@ -80,10 +80,10 @@ const articles = (await getCollection('articles'))
             <strong>{t.dealButtons.security}</strong>
           </a>
         ) : (
-          <div class="deal-item deal-disabled">
+          <a class="deal-item" href={localePath(lang, 'category/security')}>
             <span class="deal-badge">{t.dealBadges.security}</span>
             <strong>{t.dealButtons.security}</strong>
-          </div>
+          </a>
         )
       }
     </div>
