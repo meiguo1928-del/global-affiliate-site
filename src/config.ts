@@ -2,7 +2,7 @@ export const SITE = {
   name: 'Tool Scout Lab',
   url: 'https://toolscoutlab.com',
   author: 'Tool Scout Lab Team',
-  email: 'meiguo1928@gmail.com',
+  email: 'contact@toolscoutlab.com',
 } as const;
 
 /** 替换为你的真实联盟链接 */
