@@ -2,7 +2,8 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE, LOCALES } from '../config';
 
-const staticPages = ['', 'about', 'contact', 'privacy'];
+const staticPages = ['', 'about', 'how-we-test', 'contact', 'privacy'];
+const categoryPages = ['category/ai-tools', 'category/hosting', 'category/security'];
 
 export const GET: APIRoute = async () => {
   const articles = await getCollection('articles');
@@ -12,6 +13,10 @@ export const GET: APIRoute = async () => {
     for (const page of staticPages) {
       const path = page ? `/${lang}/${page}/` : `/${lang}/`;
       urls.push(new URL(path, SITE.url).href);
+    }
+
+    for (const page of categoryPages) {
+      urls.push(new URL(`/${lang}/${page}/`, SITE.url).href);
     }
   }
 
