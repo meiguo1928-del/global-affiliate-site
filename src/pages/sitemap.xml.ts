@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { getCollection } from 'astro:content';
 import { SITE, LOCALES } from '../config';
 
+export const prerender = true;
+
 const staticPages = ['', 'about', 'how-we-test', 'contact', 'privacy'];
 const categoryPages = ['category/ai-tools', 'category/hosting', 'category/security'];
 
