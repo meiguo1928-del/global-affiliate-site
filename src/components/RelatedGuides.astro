@@ -14,7 +14,7 @@ const { lang, permalink, keywords = [] } = Astro.props;
 const label = ui[lang].home.readMore;
 
 const topicRules: { label: string; patterns: RegExp }[] = [
-  { label: 'hosting', patterns: /hosting|hostinger|bluehost|website.?builder/i },
+  { label: 'hosting', patterns: /hosting|hostinger|bluehost|siteground|website.?builder/i },
   { label: 'security', patterns: /vpn|nordvpn|surfshark|security/i },
   { label: 'ai-tools', patterns: /ai|jasper|copy\.?ai|writing|canva|semrush|email|marketing/i },
 ];

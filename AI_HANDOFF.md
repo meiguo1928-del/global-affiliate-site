@@ -28,7 +28,7 @@
 
 - 技术栈：Astro 静态站 + Markdown 文章 + Cloudflare Workers/Pages 部署
 - 8 种语言：en, de, ja, fr, es, pt, th, vn
-- 80 篇文章（10 个主题 × 8 语言），145 个页面
+- 88 篇文章（11 个主题 × 8 语言），153 个页面
 - **没有后台**，内容全是 Markdown 文件
 - 赚钱方式：文章里的联盟链接（Hostinger、Surfshark、NordVPN 等）
 
@@ -71,7 +71,8 @@
 2. **内容**
    - 80 篇多语言文章（地域定制，不是硬翻）
    - 主题：VPN、Hosting、AI 工具、Email Marketing、Website Builders、Canva/Semrush 替代品等
-   - 最新新增：Jasper vs Copy.ai（8 语言，2026-06-17）
+   - 最新新增：Hostinger vs SiteGround（8 语言，2026-06-17）
+   - 此前新增：Jasper vs Copy.ai（8 语言，2026-06-17）
 
 3. **SEO**
    - Google Search Console 已验证

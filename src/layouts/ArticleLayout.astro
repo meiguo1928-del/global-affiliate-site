@@ -20,7 +20,7 @@ const { title, description, lang, slug, date, updated, alternates, keywords } = 
 const t = ui[lang].article;
 const joinedKeywords = (keywords ?? []).join(' ').toLowerCase();
 const isHosting =
-  /hosting|hostinger|bluehost|website.?builder/.test(joinedKeywords);
+  /hosting|hostinger|bluehost|siteground|website.?builder/.test(joinedKeywords);
 const isVpn = /vpn|nordvpn|surfshark|security/.test(joinedKeywords);
 const ctaLinks = isHosting
   ? [{ href: AFFILIATE_LINKS.hostinger, label: t.ctaHostinger }]
