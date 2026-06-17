@@ -1,3 +1,110 @@
 ---
-return Astro.redirect('/en/');
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { AFFILIATE_LINKS, isRealAffiliateLink, type Locale } from '../config';
+import { ui } from '../i18n/ui';
+import { localePath } from '../utils/locale';
+
+const lang: Locale = 'en';
+const t = ui[lang].home;
+const trustBadges = ['Independent comparisons', 'Pricing checked', 'Affiliate links disclosed'];
+
+const articles = (await getCollection('articles'))
+  .filter((a) => a.data.lang === lang)
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
+
+<BaseLayout title={t.title} description={t.subtitle} lang={lang} subPath="">
+  <section class="hero-panel">
+    <p class="eyebrow">Tool Scout Lab</p>
+    <h1>{t.title}</h1>
+    <p class="hero-sub">{t.subtitle}</p>
+    <div class="trust-row" aria-label="Trust signals">
+      {trustBadges.map((badge) => <span>{badge}</span>)}
+    </div>
+    <section class="quick-note">
+      <strong>{t.helpTitle}:</strong>
+      <ul>
+        {t.helpBullets.map((b) => <li>{b}</li>)}
+      </ul>
+    </section>
+  </section>
+
+  <section class="deals-box">
+    <h2>{t.dealsTitle}</h2>
+    <p>{t.dealsSubtitle}</p>
+    <div class="deals-grid">
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.surfshark) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.surfshark} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.ai}</span>
+            <strong>{t.dealButtons.ai}</strong>
+          </a>
+        ) : (
+          <a class="deal-item" href={localePath(lang, 'category/ai-tools')}>
+            <span class="deal-badge">{t.dealBadges.ai}</span>
+            <strong>{t.dealButtons.ai}</strong>
+          </a>
+        )
+      }
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.hostinger) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.hostinger} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.hosting}</span>
+            <strong>{t.dealButtons.hosting}</strong>
+          </a>
+        ) : (
+          <a class="deal-item" href={localePath(lang, 'category/hosting')}>
+            <span class="deal-badge">{t.dealBadges.hosting}</span>
+            <strong>{t.dealButtons.hosting}</strong>
+          </a>
+        )
+      }
+      {
+        isRealAffiliateLink(AFFILIATE_LINKS.nordvpn) ? (
+          <a class="deal-item" href={AFFILIATE_LINKS.nordvpn} rel="nofollow sponsored" target="_blank">
+            <span class="deal-badge">{t.dealBadges.security}</span>
+            <strong>{t.dealButtons.security}</strong>
+          </a>
+        ) : (
+          <a class="deal-item" href={localePath(lang, 'category/security')}>
+            <span class="deal-badge">{t.dealBadges.security}</span>
+            <strong>{t.dealButtons.security}</strong>
+          </a>
+        )
+      }
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>{t.tracksTitle}</h2>
+    <div class="track-grid">
+      {
+        t.tracks.map((track) => (
+          <a class="track-card" href={localePath(lang, track.href)}>
+            <span class="track-kicker">{track.title}</span>
+            <h3>{track.title}</h3>
+            <p>{track.desc}</p>
+            <span class="card-action">{t.readMore}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-block">
+    <h2>{t.latest}</h2>
+    <div class="card-grid">
+      {
+        articles.map((article) => (
+          <a class="card" href={localePath(lang, article.data.permalink)}>
+            <span class="article-lang">{article.data.lang.toUpperCase()}</span>
+            <h3>{article.data.title}</h3>
+            <p>{article.data.description}</p>
+            <span class="card-action">{t.readMore}</span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+</BaseLayout>
