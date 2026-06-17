@@ -5,6 +5,8 @@ type UiStrings = {
   disclosure: { title: string; text: string };
   footer: { rights: string; disclosure: string };
   home: {
+    seoTitle: string;
+    seoDescription: string;
     title: string;
     subtitle: string;
     helpTitle: string;
@@ -49,7 +51,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Affiliate Disclosure: We earn commissions from qualifying purchases.',
     },
     home: {
-      title: 'Tool Scout Lab: Buy Better, Spend Less',
+      seoTitle: 'Tool Scout Lab | Software & Tool Comparison Guides',
+      seoDescription:
+        'Independent comparisons for AI tools, web hosting, VPN, and business software. Pricing checked, honest alternatives, affiliate links disclosed.',
+      title: 'Buy Better, Spend Less',
       subtitle: 'AI tools, business software, hosting, and security guides focused on price, value, and results.',
       helpTitle: 'How this site helps you',
       helpBullets: [
@@ -80,12 +85,13 @@ export const ui: Record<Locale, UiStrings> = {
       emptyTrack: 'No guides in this category yet. More buying guides are coming soon.',
     },
     about: {
-      title: 'About Us',
+      title: 'About Tool Scout Lab',
       body: [
-        'Tool Scout Lab publishes independent comparison guides for AI tools, web hosting, security software, and small-business SaaS.',
-        'Our reviews are based on publicly available specs, pricing pages, and hands-on testing notes where applicable. We clearly label affiliate links.',
-        'We do not accept paid placements in exchange for guaranteed positive reviews.',
-        'We serve readers worldwide in multiple languages.',
+        'Tool Scout Lab is an independent publisher of software comparison guides. We help readers compare AI tools, web hosting, VPN services, and small-business SaaS before they buy.',
+        'Our guides focus on practical buying decisions: total cost, plan limits, alternatives, and who should buy versus skip each product.',
+        'Reviews are based on publicly available specs, pricing pages, and hands-on testing notes where applicable. Affiliate links are always clearly labeled.',
+        'We do not accept paid placements in exchange for guaranteed positive reviews or ranking positions.',
+        'Tool Scout Lab serves readers worldwide in English, German, French, Spanish, Portuguese, Japanese, Thai, and Vietnamese.',
       ],
     },
     testing: {
@@ -168,7 +174,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Affiliate-Hinweis: Wir verdienen Provisionen bei qualifizierten Käufen.',
     },
     home: {
-      title: 'Tool Scout Lab: Besser kaufen, weniger zahlen',
+      seoTitle: 'Tool Scout Lab | Software- & Tool-Vergleichsguides',
+      seoDescription:
+        'Unabhängige Vergleiche zu KI-Tools, Webhosting, VPN und Business-Software. Preise geprüft, Alternativen ehrlich aufgelistet, Affiliate-Links offengelegt.',
+      title: 'Besser kaufen, weniger zahlen',
       subtitle: 'Vergleiche zu KI-Tools, Business-Software, Hosting und Sicherheit — mit Fokus auf Preis und Nutzen.',
       helpTitle: 'So hilft dir diese Website',
       helpBullets: [
@@ -199,11 +208,13 @@ export const ui: Record<Locale, UiStrings> = {
       emptyTrack: 'Für diese Kategorie sind noch keine Beiträge verfügbar.',
     },
     about: {
-      title: 'Über uns',
+      title: 'Über Tool Scout Lab',
       body: [
-        'Tool Scout Lab veröffentlicht unabhängige Vergleichsratgeber zu KI-Tools, Webhosting, Sicherheitssoftware und SaaS für kleine Unternehmen.',
-        'Unsere Bewertungen basieren auf öffentlichen Spezifikationen, Preisseiten und — wo möglich — eigenen Tests. Affiliate-Links sind gekennzeichnet.',
-        'Wir erreichen Leser weltweit in mehreren Sprachen.',
+        'Tool Scout Lab ist ein unabhängiger Herausgeber von Software-Vergleichsguides. Wir helfen Lesern, KI-Tools, Webhosting, VPN-Dienste und SaaS für kleine Unternehmen vor dem Kauf zu vergleichen.',
+        'Unsere Guides konzentrieren sich auf praktische Kaufentscheidungen: Gesamtkosten, Planlimits, Alternativen und für wen sich ein Produkt lohnt.',
+        'Bewertungen basieren auf öffentlichen Spezifikationen, Preisseiten und — wo möglich — eigenen Tests. Affiliate-Links sind immer gekennzeichnet.',
+        'Wir akzeptieren keine bezahlten Platzierungen im Austausch für garantiert positive Bewertungen.',
+        'Tool Scout Lab erreicht Leser weltweit in acht Sprachen.',
       ],
     },
     testing: {
@@ -286,7 +297,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgation : nous pouvons percevoir des commissions sur certains achats qualifiés.',
     },
     home: {
-      title: 'Tool Scout Lab : acheter mieux, dépenser moins',
+      seoTitle: 'Tool Scout Lab | Guides comparatifs logiciels & outils',
+      seoDescription:
+        'Comparatifs indépendants d’outils IA, hébergement web, VPN et SaaS. Prix vérifiés, alternatives listées, liens d’affiliation signalés.',
+      title: 'Acheter mieux, dépenser moins',
       subtitle: 'Guides sur les outils IA, logiciels SaaS, hébergement et sécurité, avec un focus sur le prix, la conformité et la valeur réelle.',
       helpTitle: 'Comment ce site vous aide',
       helpBullets: [
@@ -392,7 +406,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgación: ganamos comisiones por compras calificadas.',
     },
     home: {
-      title: 'Tool Scout Lab: compra mejor y gasta menos',
+      seoTitle: 'Tool Scout Lab | Guías de comparación de software',
+      seoDescription:
+        'Comparativas independientes de herramientas IA, hosting, VPN y SaaS. Precios verificados, alternativas honestas y afiliación clara.',
+      title: 'Compra mejor y gasta menos',
       subtitle: 'Guías de herramientas de IA, software empresarial, hosting y seguridad enfocadas en valor real.',
       helpTitle: 'Cómo te ayuda este sitio',
       helpBullets: [
@@ -497,7 +514,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Divulgação: podemos ganhar comissões por compras qualificadas.',
     },
     home: {
-      title: 'Tool Scout Lab: compre melhor e gaste menos',
+      seoTitle: 'Tool Scout Lab | Guias de comparação de software',
+      seoDescription:
+        'Comparativos independentes de ferramentas de IA, hospedagem, VPN e SaaS. Preços verificados, alternativas honestas e afiliados sinalizados.',
+      title: 'Compre melhor e gaste menos',
       subtitle: 'Guias de ferramentas de IA, SaaS, hospedagem e segurança com foco em preço, produtividade e retorno.',
       helpTitle: 'Como este site ajuda você',
       helpBullets: [
@@ -600,7 +620,10 @@ export const ui: Record<Locale, UiStrings> = {
     },
     footer: { rights: '無断転載禁止', disclosure: 'アフィリエイトリンクにより報酬を得る場合があります。' },
     home: {
-      title: 'Tool Scout Lab: 賢く買って無駄を減らす',
+      seoTitle: 'Tool Scout Lab | ソフトウェア比較ガイド',
+      seoDescription:
+        'AIツール、ホスティング、VPN、ビジネスSaaSの独立比較。価格確認済み、代替案を明示、提携リンクを開示。',
+      title: '賢く買って無駄を減らす',
       subtitle: 'AIツール、ビジネスソフト、ホスティング、セキュリティ製品を価格重視で比較。',
       helpTitle: 'このサイトでできること',
       helpBullets: [
@@ -698,7 +721,10 @@ export const ui: Record<Locale, UiStrings> = {
       disclosure: 'Tiết lộ: chúng tôi có thể nhận hoa hồng từ các giao dịch đủ điều kiện.',
     },
     home: {
-      title: 'Tool Scout Lab: mua thông minh, tiết kiệm hơn',
+      seoTitle: 'Tool Scout Lab | Hướng dẫn so sánh phần mềm',
+      seoDescription:
+        'So sánh độc lập công cụ AI, hosting, VPN và SaaS. Giá đã kiểm tra, liệt kê phương án thay thế, liên kết tiếp thị rõ ràng.',
+      title: 'Mua thông minh, tiết kiệm hơn',
       subtitle: 'Hướng dẫn về công cụ AI, SaaS, hosting và bảo mật cho người làm MMO, bán hàng online và doanh nghiệp nhỏ.',
       helpTitle: 'Trang này giúp bạn như thế nào',
       helpBullets: [
@@ -801,7 +827,10 @@ export const ui: Record<Locale, UiStrings> = {
     },
     footer: { rights: 'สงวนลิขสิทธิ์', disclosure: 'เราได้รับค่าคอมมิชชันจากการซื้อที่มีสิทธิ์' },
     home: {
-      title: 'Tool Scout Lab: ซื้อคุ้ม ใช้น้อยจ่ายน้อย',
+      seoTitle: 'Tool Scout Lab | คู่มือเปรียบเทียบซอฟต์แวร์',
+      seoDescription:
+        'เปรียบเทียบเครื่องมือ AI โฮสติ้ง VPN และ SaaS แบบอิสระ ตรวจสอบราคาแล้ว แนะนำทางเลือกอื่น และเปิดเผยลิงก์พันธมิตร',
+      title: 'ซื้อคุ้ม ใช้น้อยจ่ายน้อย',
       subtitle: 'คู่มือเปรียบเทียบเครื่องมือ AI ซอฟต์แวร์ธุรกิจ โฮสติ้ง และความปลอดภัย เน้นความคุ้มค่า',
       helpTitle: 'เว็บไซต์นี้ช่วยคุณอย่างไร',
       helpBullets: [

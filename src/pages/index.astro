@@ -14,7 +14,14 @@ const articles = (await getCollection('articles'))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 
-<BaseLayout title={t.title} description={t.subtitle} lang={lang} subPath="">
+<BaseLayout
+  title={t.seoTitle}
+  description={t.seoDescription}
+  lang={lang}
+  subPath=""
+  isHome={true}
+  isRoot={true}
+>
   <section class="hero-panel">
     <p class="eyebrow">Tool Scout Lab</p>
     <h1>{t.title}</h1>

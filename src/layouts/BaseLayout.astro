@@ -11,9 +11,11 @@ interface Props {
   subPath?: string;
   alternates?: Partial<Record<Locale, string>>;
   keywords?: string[];
+  isHome?: boolean;
+  isRoot?: boolean;
 }
 
-const { title, description, lang, subPath = '', alternates, keywords } = Astro.props;
+const { title, description, lang, subPath = '', alternates, keywords, isHome = false, isRoot = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,6 +28,8 @@ const { title, description, lang, subPath = '', alternates, keywords } = Astro.p
       path={subPath}
       alternates={alternates}
       keywords={keywords}
+      isHome={isHome}
+      isRoot={isRoot}
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
