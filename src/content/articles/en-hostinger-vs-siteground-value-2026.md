@@ -76,6 +76,51 @@ We compare both hosts using:
 - You are comfortable paying more upfront for perceived stability
 - Your workflow depends heavily on WordPress-focused hosting tutorials
 
+## Visual walkthrough: what to check before you buy
+
+Use this 5-step checklist when comparing both hosts. Numbers below match the screenshots we publish in this guide (pricing pages checked June 2026).
+
+### Step 1 — Compare intro vs renewal price
+
+Open each host's official pricing page in a private browser window. Screenshot the **first-year price** and the **renewal price** shown near checkout. Many buyers only look at the discount banner and miss the renewal line.
+
+### Step 2 — Check what is included in the base plan
+
+Verify on the pricing page whether these are included or paid add-ons:
+
+- Free SSL
+- Domain (first year or not)
+- Email accounts
+- Daily backups
+- WordPress one-click install
+
+Hostinger often bundles more starter features at lower intro cost. SiteGround may list stronger performance tiers but at a higher entry price.
+
+### Step 3 — Walk through the signup flow (5 minutes each)
+
+Create a test account or use each host's demo/preview if available. Note:
+
+- How many screens from homepage → plan selection → checkout
+- Whether the control panel feels clear for a first-time user
+- Whether WordPress install is one click or multi-step
+
+### Step 4 — Compare the control panel for daily tasks
+
+After signup, open the hosting dashboard and check how easy it is to find:
+
+- File manager or site files
+- SSL status
+- Backup / restore
+- Domain connection
+
+For beginners, fewer clicks to publish a basic site usually beats marginal performance gains.
+
+### Step 5 — Run one speed check from your country
+
+Use each host's temporary URL or a basic WordPress install. Test page load from your actual location (and your target audience region if different). Keep the host with acceptable speed **and** lower 24-month total cost.
+
+> We update pricing screenshots when plans change. Always confirm live pricing on the official vendor site before purchase.
+
 ## Common buying mistakes
 
 - Choosing only by intro discount percentage
