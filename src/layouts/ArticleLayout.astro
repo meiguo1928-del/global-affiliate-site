@@ -1,6 +1,7 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import AffiliateDisclosure from '../components/AffiliateDisclosure.astro';
+import RelatedGuides from '../components/RelatedGuides.astro';
 import { AFFILIATE_LINKS, isRealAffiliateLink, type Locale } from '../config';
 import { ui } from '../i18n/ui';
 
@@ -18,12 +19,17 @@ interface Props {
 const { title, description, lang, slug, date, updated, alternates, keywords } = Astro.props;
 const t = ui[lang].article;
 const joinedKeywords = (keywords ?? []).join(' ').toLowerCase();
-const ctaLinks = joinedKeywords.includes('hosting')
+const isHosting =
+  /hosting|hostinger|bluehost|website.?builder/.test(joinedKeywords);
+const isVpn = /vpn|nordvpn|surfshark|security/.test(joinedKeywords);
+const ctaLinks = isHosting
   ? [{ href: AFFILIATE_LINKS.hostinger, label: t.ctaHostinger }]
-  : [
-      { href: AFFILIATE_LINKS.surfshark, label: t.ctaSurfshark },
-      { href: AFFILIATE_LINKS.nordvpn, label: t.ctaNordvpn },
-    ];
+  : isVpn
+    ? [
+        { href: AFFILIATE_LINKS.surfshark, label: t.ctaSurfshark },
+        { href: AFFILIATE_LINKS.nordvpn, label: t.ctaNordvpn },
+      ]
+    : [];
 const fmt = (d: Date) =>
   d.toLocaleDateString(lang === 'en' ? 'en-US' : lang, {
     year: 'numeric',
@@ -49,6 +55,7 @@ const fmt = (d: Date) =>
       </p>
     </header>
     <slot />
+    <RelatedGuides lang={lang} permalink={slug} keywords={keywords} />
     <div class="cta-box">
       <p>{t.ctaIntro}</p>
       {

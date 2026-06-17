@@ -2,6 +2,7 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import SEO from '../components/SEO.astro';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import type { Locale } from '../config';
 
 interface Props {
@@ -31,6 +32,7 @@ const { title, description, lang, subPath = '', alternates, keywords, isHome = f
       isHome={isHome}
       isRoot={isRoot}
     />
+    <GoogleAnalytics />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"

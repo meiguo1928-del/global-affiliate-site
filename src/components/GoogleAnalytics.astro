@@ -1,0 +1,19 @@
+---
+import { GA_MEASUREMENT_ID } from '../config';
+
+const id = GA_MEASUREMENT_ID.trim();
+---
+
+{id && (
+  <>
+    <script async src={`https://www.googletagmanager.com/gtag/js?id=${id}`}></script>
+    <script is:inline define:vars={{ id }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', id, { anonymize_ip: true });
+    </script>
+  </>
+)}

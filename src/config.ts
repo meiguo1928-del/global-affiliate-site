@@ -5,6 +5,12 @@ export const SITE = {
   email: 'contact@toolscoutlab.com',
 } as const;
 
+/**
+ * GA4 Measurement ID from analytics.google.com (e.g. G-XXXXXXXXXX).
+ * Leave empty until you create a GA4 property and paste the ID here.
+ */
+export const GA_MEASUREMENT_ID = import.meta.env.PUBLIC_GA_MEASUREMENT_ID ?? '';
+
 /** 替换为你的真实联盟链接 */
 export const AFFILIATE_LINKS = {
   surfshark: 'https://YOUR-SURFSHARK-AFFILIATE-LINK',
