@@ -222,6 +222,110 @@ git pull origin main
 
 ---
 
+## 六-B、上班 Win + 下班 Mac 改代码口令卡（给用户的）
+
+> **用户不懂技术，只靠这个流程 + pull/push 习惯即可。**  
+> Cursor 对话记录 **不跨 Win/Mac 同步**；代码以 **GitHub** 为准。  
+> **开工 pull，收工 push。**
+
+### 每天只记 4 步
+
+| 顺序 | 做什么 | 谁做 |
+|------|--------|------|
+| 1 | 用 Cursor 打开 **对的文件夹** | 用户 |
+| 2 | **git pull**（拉 GitHub 最新代码） | 用户复制粘贴 |
+| 3 | 让 **AI 改代码** | AI |
+| 4 | **git push**（推上去，网站 1–3 分钟自动更新） | 用户复制粘贴 |
+
+### 两个项目别搞混
+
+| 网站 | Windows 文件夹 | Mac 文件夹 |
+|------|----------------|------------|
+| **Tool Scout Lab**（联盟站） | `F:\GlobalAffiliateProject` | `~/Projects/global-affiliate-site` |
+| **霜雪商城**（另一个项目） | Win 上对应路径 | `/Applications/开发` |
+
+改 Tool Scout Lab → 只打开 **global-affiliate-site**，不要和霜雪混在一个对话里。
+
+### 场景 A：上班 — 工作电脑 Windows
+
+1. Cursor → **文件 → 打开…** → `F:\GlobalAffiliateProject`
+2. **开工**（PowerShell，复制粘贴）：
+
+```powershell
+cd F:\GlobalAffiliateProject
+git pull origin main
+```
+
+3. 跟 AI 说话前可加这句：
+
+```
+我在 Windows 工作电脑上改 Tool Scout Lab，已经 git pull 过了。
+请基于当前最新代码修改，另一台电脑做过的事不要重复改坏。
+请先读 AI_HANDOFF.md。
+```
+
+4. AI 改完后 → **收工**（把引号里改成今天改了啥）：
+
+```powershell
+cd F:\GlobalAffiliateProject
+git add .
+git commit -m "今天改了什么"
+git push origin main
+```
+
+5. **下班前必查**：今天改的都 push 了吗？没 push = 晚上 Mac 看不到。
+
+### 场景 B：下班 — 私人 Mac
+
+1. Cursor → **文件 → 打开…** → `/Users/libai/Projects/global-affiliate-site`
+2. **开工**（终端，复制粘贴）：
+
+```bash
+cd ~/Projects/global-affiliate-site && git pull origin main
+```
+
+3. 跟 AI 说话前可加这句：
+
+```
+我在 Mac 私人电脑上改 Tool Scout Lab，已经 git pull 过了。
+请基于当前最新代码修改，白天 Windows 上做过的事不要重复改坏。
+请先读 AI_HANDOFF.md。
+```
+
+4. AI 改完后 → **收工**：
+
+```bash
+cd ~/Projects/global-affiliate-site
+git add .
+git commit -m "今晚改了什么"
+git push origin main
+```
+
+5. **睡觉前必查**：今晚改的都 push 了吗？没 push = 明天 Win 看不到。
+
+### Mac 本地预览（可选）
+
+```bash
+cd ~/Projects/global-affiliate-site
+npm run dev
+```
+
+浏览器打开 http://localhost:4321/en/ ，看完在终端按 **Ctrl + C** 停止。
+
+### Mac 环境（用户已完成 ✅）
+
+- 项目路径：`~/Projects/global-affiliate-site`
+- 已从 GitHub 克隆，`npm install` 已完成，本地预览正常
+- Git 已配置：`MYINT SAW` / `contact@toolscoutlab.com`
+
+### 给 AI 的提醒（读到这里请遵守）
+
+- 用户开工前通常已 `git pull`；若不确定，先提醒用户 pull 再改
+- **不要**把 Win 对话里的内容当事实；以 **当前仓库文件 + 本 HANDOFF** 为准
+- 改完后只给用户 push 命令，**不要擅自 commit/push**（除非用户说「推送吧」）
+
+---
+
 ## 七、给接手 AI 的操作规范（用户偏好）
 
 1. **全部用中文和用户沟通**
@@ -288,23 +392,26 @@ nordvpn:   'https://YOUR-NORDVPN-AFFILIATE-LINK'    // ❌ 未申请
 | 2026-06 | UI 科技感优化 → 用户决定**先不做**，优先联盟 |
 | 2026-06-16 | 提交 Hostinger + Surfshark 联盟申请 |
 | 2026-06-17 | 接入 GA 代码、自动内链、联盟状态追踪文档 |
+| 2026-06-17 | Mac 环境搭建完成；本文件新增「六-B 上班 Win + 下班 Mac 口令卡」 |
 
 ---
 
-## 十一、发给 Mac AI 的启动指令（用户直接复制粘贴）
+## 十一、发给 AI 的启动指令（Win / Mac 通用，用户直接复制粘贴）
 
 ```
-请先阅读项目根目录的 AI_HANDOFF.md 文件，了解 Tool Scout Lab 项目的全部背景。
+请先阅读项目根目录的 AI_HANDOFF.md（尤其第六节和六-B 口令卡），了解 Tool Scout Lab 全部背景。
 
 我们正在进行全球联盟营销，网站已上线 https://toolscoutlab.com。
 Hostinger 和 Surfshark 联盟正在审核中。
+
+我已经 git pull 过了。请基于当前最新代码修改，不要重复改坏另一台电脑做过的事。
 
 请从这里继续：
 1. 确认你已读完 AI_HANDOFF.md
 2. 告诉我当前项目状态和下一步建议
 3. 后续你直接改代码，我只在最后 git push
 
-我用 Mac，项目已从 GitHub 克隆。不要让我手动上传文件。
+不要让我手动上传文件到 GitHub。
 ```
 
 ---
@@ -328,6 +435,6 @@ A: `npm run dev` → http://localhost:4321/en/
 
 ---
 
-*文档生成时间：2026-06-17*  
-*对应 Git 提交：65230e1*  
-*Windows 工作区：F:\GlobalAffiliateProject*
+*文档最后更新：2026-06-17*  
+*Windows 工作区：F:\GlobalAffiliateProject*  
+*Mac 工作区：~/Projects/global-affiliate-site*
